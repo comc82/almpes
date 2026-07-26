@@ -646,6 +646,27 @@ p{ margin: 0 0 1em; color: var(--muted); }
   to{ opacity:1; }
 }
 
+/* ── Utility: no inline styles ── */
+.page-hero h1{ max-width:28ch; font-size:clamp(2rem,3.8vw,3rem); }
+.page-hero h1--narrow{ max-width:16ch; }
+.page-hero-lead{ max-width:58ch; font-size:17px; }
+.page-hero-lead--wide{ max-width:60ch; }
+.eyebrow--accent{ color:var(--accent); }
+.eyebrow--rose{ color:var(--rose-lt); }
+.cta-band--dark{ background:var(--fg); }
+.section--compact-bottom{ padding-bottom:20px; }
+.section--compact-top{ padding-top:20px; }
+.form-card h2{ font-size:22px; }
+.form-hint{ font-size:12px; color:var(--muted); margin-top:12px; text-align:center; }
+.plan-features{ margin-top:16px; display:grid; gap:8px; list-style:none; padding:0; }
+.plan-features li{ display:flex; gap:8px; align-items:flex-start; font-size:14px; color:var(--muted); }
+.plan-features .arrow{ color:var(--accent); font-weight:700; flex-shrink:0; }
+.plan-features + .btn,
+.plan-cta{ margin-top:20px; align-self:flex-start; }
+.contact-card--mt{ margin-top:24px; }
+.mt-lg{ margin-top:32px; }
+.map-frame--mt{ margin-top:20px; }
+
 /* ── Responsive ── */
 @media (max-width:1024px){
   .hero .hero-grid{ max-width:100%; }
