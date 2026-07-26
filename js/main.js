@@ -109,30 +109,24 @@
 
   /* Mostrar error en campo */
   function showError(field,msg){
-    field.closest('.field').classList.add('field--error');
-    var existing=field.closest('.field').querySelector('.field-msg');
-    if(!existing){
-      var span=document.createElement('span');
-      span.className='field-msg';
-      span.textContent=msg;
-      field.closest('.field').appendChild(span);
-    } else {
-      existing.textContent=msg;
-    }
+    var container=field.closest('.field');
+    container.classList.add('field--error');
+    var msgEl=container.querySelector('.field-msg');
+    if(msgEl) msgEl.textContent=msg;
   }
 
   /* Limpiar error de campo */
   function clearError(field){
-    field.closest('.field').classList.remove('field--error');
-    var msg=field.closest('.field').querySelector('.field-msg');
-    if(msg) msg.remove();
+    var container=field.closest('.field');
+    if(!container) return;
+    container.classList.remove('field--error');
+    var msgEl=container.querySelector('.field-msg');
+    if(msgEl) msgEl.textContent='';
   }
 
   /* Limpiar error de select */
   function clearSelectError(select){
-    select.closest('.field').classList.remove('field--error');
-    var msg=select.closest('.field').querySelector('.field-msg');
-    if(msg) msg.remove();
+    clearError(select);
   }
 
   /* Mensaje general de error */
@@ -282,15 +276,7 @@
 
     var servicio=form.querySelector('#servicio');
     if(servicio&&!servicio.value){
-      servicio.closest('.field').classList.add('field--error');
-      var existing=servicio.closest('.field').querySelector('.field-msg');
-      if(!existing){
-        var span=document.createElement('span');
-        span.className='field-msg';
-        span.textContent='¿Qué servicio te interesa? Elegí una opción.';
-        servicio.closest('.field').appendChild(span);
-      }
-      v.clear(servicio);
+      showError(servicio,'¿Qué servicio te interesa? Elegí una opción.');
     }
 
     var mensaje=form.querySelector('#mensaje');
@@ -326,15 +312,7 @@
 
     var area=form.querySelector('#area');
     if(area&&!area.value){
-      area.closest('.field').classList.add('field--error');
-      var existing=area.closest('.field').querySelector('.field-msg');
-      if(!existing){
-        var span=document.createElement('span');
-        span.className='field-msg';
-        span.textContent='¿En qué área te gustaría trabajar? Elegí una opción.';
-        area.closest('.field').appendChild(span);
-      }
-      v.clear(area);
+      showError(area,'¿Qué área te interesa? Elegí una opción.');
     }
 
     var cvFile=form.querySelector('#cv-file');

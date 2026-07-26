@@ -119,20 +119,23 @@
           <input type="hidden" name="_timestamp" class="form-ts">
           <div class="field-row">
             <div class="field">
-              <label for="nombre">Nombre completo</label>
+              <div class="field-label"><label for="nombre">Nombre completo</label></div>
               <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" maxlength="100" pattern=".{2,100}">
+              <div class="field-msg" data-for="nombre"></div>
             </div>
             <div class="field">
-              <label for="telefono">Teléfono</label>
+              <div class="field-label"><label for="telefono">Teléfono</label></div>
               <input type="tel" id="telefono" name="telefono" placeholder="914 000 000" pattern="[\d\s\-\+]{7,15}" maxlength="15">
+              <div class="field-msg" data-for="telefono"></div>
             </div>
           </div>
           <div class="field">
-            <label for="correo">Correo</label>
+            <div class="field-label"><label for="correo">Correo</label></div>
             <input type="email" id="correo" name="correo" required placeholder="tucorreo@email.com" maxlength="150">
+            <div class="field-msg" data-for="correo"></div>
           </div>
           <div class="field">
-            <label for="area">Área de interés</label>
+            <div class="field-label"><label for="area">Área de interés</label></div>
             <select id="area" name="area" required>
               <option value="">Selecciona un área</option>
               <option value="atencion-al-cliente">Atención al Cliente</option>
@@ -141,15 +144,20 @@
               <option value="administracion">Administración</option>
               <option value="otro">Otro</option>
             </select>
+            <div class="field-msg" data-for="area"></div>
           </div>
           <div class="field">
-            <label for="experiencia">Experiencia previa</label>
+            <div class="field-label"><label for="experiencia">Experiencia previa</label></div>
             <textarea id="experiencia" name="experiencia" rows="3" placeholder="Cuéntanos brevemente tu experiencia laboral" maxlength="1500"></textarea>
+            <div class="field-msg" data-for="experiencia"></div>
           </div>
           <div class="field">
-            <label for="cv-file">Adjuntar CV (PDF o DOC, máx. 5 MB)</label>
+            <div class="field-label">
+              <label for="cv-file">Adjuntar CV</label>
+              <span class="field-hint">PDF, DOC o DOCX — máx. 5 MB</span>
+            </div>
             <input type="file" id="cv-file" name="cv-file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-            <span class="field-hint">Solo archivos PDF, DOC o DOCX</span>
+            <div class="field-msg" data-for="cv-file"></div>
           </div>
           <div class="form-error" role="alert" aria-live="polite"></div>
           <button type="submit" class="btn btn--accent btn--full">Enviar postulación</button>

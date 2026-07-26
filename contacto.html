@@ -111,32 +111,37 @@
         <input type="hidden" name="_timestamp" class="form-ts">
         <div class="field-row">
           <div class="field">
-            <label for="nombre">Nombre</label>
+            <div class="field-label"><label for="nombre">Nombre</label></div>
             <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" maxlength="100" pattern=".{2,100}">
+            <div class="field-msg" data-for="nombre"></div>
           </div>
           <div class="field">
-            <label for="empresa">Empresa</label>
+            <div class="field-label"><label for="empresa">Empresa</label></div>
             <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" maxlength="100">
+            <div class="field-msg" data-for="empresa"></div>
           </div>
         </div>
         <div class="field">
-          <label for="correo">Correo</label>
+          <div class="field-label"><label for="correo">Correo</label></div>
           <input type="email" id="correo" name="correo" required placeholder="tucorreo@empresa.com" maxlength="150">
+          <div class="field-msg" data-for="correo"></div>
         </div>
         <div class="field">
-          <label for="servicio">Servicio de interés</label>
+          <div class="field-label"><label for="servicio">Servicio de interés</label></div>
           <select id="servicio" name="servicio" required>
             <option value="">Selecciona un servicio</option>
-            <option value="inbound">Atención al Cliente</option>
-            <option value="outbound">Gestión de Ventas</option>
+            <option value="atencion-al-cliente">Atención al Cliente</option>
+            <option value="gestion-de-ventas">Gestión de Ventas</option>
             <option value="consultoria">Asesoría Especializada</option>
             <option value="hosting">Infraestructura Dedicada</option>
             <option value="otro">Otro / Múltiples servicios</option>
           </select>
+          <div class="field-msg" data-for="servicio"></div>
         </div>
         <div class="field">
-          <label for="mensaje">Mensaje</label>
+          <div class="field-label"><label for="mensaje">Mensaje</label></div>
           <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu operación y qué servicio te interesa" maxlength="2000"></textarea>
+          <div class="field-msg" data-for="mensaje"></div>
         </div>
         <div class="form-error" role="alert" aria-live="polite"></div>
         <button type="submit" class="btn btn--accent btn--full">Enviar mensaje</button>
