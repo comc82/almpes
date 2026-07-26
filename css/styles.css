@@ -335,7 +335,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .service-card:hover .go{ gap:10px; }
 
 /* ── Mission / Vision ── */
-.mv-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.mv-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:20px;}
 .mv-card{
   background:var(--white); border-radius:var(--radius);
   padding:40px; border:1px solid var(--border);
@@ -352,10 +352,10 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .mv-card p{ margin:0; font-size:15px; line-height:1.7; }
 
 /* ── Why choose us ── */
-.why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:20px; }
 .why-item{
   padding:32px; background:var(--white); border-radius:var(--radius);
-  border:1px solid var(--border);
+  border:1px solid var(--border); 
 }
 .why-item .num{
   font-family:var(--font-mono); color:var(--accent); font-size:13px;
@@ -560,7 +560,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .stat-item .stat-label{ font-size:13px; color:var(--muted); margin-top:4px; }
 
 /* ── Process / steps ── */
-.process-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.process-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:20px;}
 .process-step{
   padding:32px; background:var(--white); border-radius:var(--radius);
   border:1px solid var(--border); position:relative;
@@ -664,7 +664,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .plan-features + .btn,
 .plan-cta{ margin-top:20px; align-self:flex-start; }
 .contact-card--mt{ margin-top:24px; }
-.mt-lg{ margin-top:32px; }
+.mt-lg{  margin-top:32px; margin-bottom:32px; }
 .map-frame--mt{ margin-top:20px; }
 
 /* ── Responsive ── */
