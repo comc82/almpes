@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contáctenos — ALMPES Contact Center</title>
 <meta name="description" content="Contáctate con ALMPES Contact Center en San Martín de Porres, Lima. Teléfono, WhatsApp, correo y formulario de contacto.">
-<link rel="icon" href="assets/logo-almpes.png">
+<link rel="icon" href="assets/favicon.ico">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -22,17 +22,18 @@
         <li class="has-sub">
           <a href="servicios.html">Servicios</a>
           <ul class="sub-menu">
-            <li><a href="inbound.html">Servicios Inbound</a></li>
-            <li><a href="outbound.html">Servicios Outbound</a></li>
-            <li><a href="consultoria.html">Consultoría Especializada</a></li>
-            <li><a href="hosting.html">Hosting Dedicado</a></li>
+            <li><a href="inbound.html">Atención al Cliente</a></li>
+            <li><a href="outbound.html">Gestión de Ventas</a></li>
+            <li><a href="consultoria.html">Asesoría Especializada</a></li>
+            <li><a href="hosting.html">Infraestructura Dedicada</a></li>
           </ul>
         </li>
+        <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
         <li><a href="contacto.html" class="active">Contáctenos</a></li>
       </ul>
     </nav>
     <div class="header-actions">
-      <span class="call-status"><span class="dot-live"></span>Línea abierta</span>
+
       <a href="https://api.whatsapp.com/send?phone=51914104466&text=HolaAlmpes" class="btn btn--accent btn--sm" target="_blank" rel="noopener">Escríbenos</a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -68,6 +69,7 @@
           <div>
             <b>Teléfono</b>
             <a href="tel:+5117481008">(01) 748-1008</a>
+            <br><a href="tel:+51914860068">914 860 068</a>
           </div>
         </div>
         <div class="contact-row">
@@ -77,6 +79,7 @@
           <div>
             <b>Correo</b>
             <a href="mailto:contactos@almpes.com">contactos@almpes.com</a>
+            <br><a href="mailto:reclutamiento@almpes.com">reclutamiento@almpes.com</a>
           </div>
         </div>
         <div class="contact-row">
@@ -85,7 +88,7 @@
           </span>
           <div>
             <b>Horario de atención</b>
-            <span>Coordinado según campaña / operación contratada.</span>
+            <span>Lunes a sábado de 9:00 a.m. a 6:00 p.m.</span>
           </div>
         </div>
       </div>
@@ -98,38 +101,46 @@
     <div class="form-card reveal reveal-delay-1">
       <span class="eyebrow">Escríbenos</span>
       <h2 style="font-size:22px;">Cuéntanos qué necesitas</h2>
-      <form id="contact-form">
+      <form id="contact-form" action="https://formsubmit.co/contactos@almpes.com" method="POST">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
+        <input type="hidden" name="_template" value="table">
+        <div class="form-hp" aria-hidden="true">
+          <input type="text" name="_formsubmit_honeypot" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="_timestamp" class="form-ts">
         <div class="field-row">
           <div class="field">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" maxlength="100" pattern=".{2,100}">
           </div>
           <div class="field">
             <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" maxlength="100">
           </div>
         </div>
         <div class="field">
           <label for="correo">Correo</label>
-          <input type="email" id="correo" name="correo" required placeholder="tucorreo@empresa.com">
+          <input type="email" id="correo" name="correo" required placeholder="tucorreo@empresa.com" maxlength="150">
         </div>
         <div class="field">
           <label for="servicio">Servicio de interés</label>
-          <select id="servicio" name="servicio">
+          <select id="servicio" name="servicio" required>
             <option value="">Selecciona un servicio</option>
-            <option value="inbound">Servicios Inbound</option>
-            <option value="outbound">Servicios Outbound</option>
-            <option value="consultoria">Consultoría Especializada</option>
-            <option value="hosting">Hosting Dedicado</option>
+            <option value="inbound">Atención al Cliente</option>
+            <option value="outbound">Gestión de Ventas</option>
+            <option value="consultoria">Asesoría Especializada</option>
+            <option value="hosting">Infraestructura Dedicada</option>
             <option value="otro">Otro / Múltiples servicios</option>
           </select>
         </div>
         <div class="field">
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu operación y qué servicio te interesa"></textarea>
+          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu operación y qué servicio te interesa" maxlength="2000"></textarea>
         </div>
+        <div class="form-error" role="alert" aria-live="polite"></div>
         <button type="submit" class="btn btn--accent btn--full">Enviar mensaje</button>
-        <p style="font-size:12px;color:var(--muted);margin-top:12px;text-align:center;">Al enviar, se abrirá tu correo con el mensaje listo para confirmar.</p>
+        <p style="font-size:12px;color:var(--muted);margin-top:12px;text-align:center;">Responderemos a la brevedad a tu correo.</p>
       </form>
     </div>
 
@@ -142,6 +153,17 @@
       <div class="footer-brand">
         <img src="assets/logo-almpes.png" alt="ALMPES Contact Center">
         <p>Empresa dedicada a la búsqueda de soluciones de negocio, mejorando la comunicación entre tu empresa y tus usuarios finales.</p>
+        <div class="social-links">
+          <a href="https://facebook.com/almpes/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/almpesperu/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@almpescontactcenter" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
+          </a>
+        </div>
       </div>
       <div>
         <h5>Navegación</h5>
@@ -149,6 +171,7 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
           <li><a href="contacto.html">Contáctenos</a></li>
         </ul>
       </div>
@@ -157,7 +180,9 @@
         <ul>
           <li><span>Calle Bolívar 472, Miraflores 15074</span></li>
           <li><a href="tel:+5117481008">(01) 748-1008</a></li>
+          <li><a href="tel:+51914860068">914 860 068</a></li>
           <li><a href="mailto:contactos@almpes.com">contactos@almpes.com</a></li>
+          <li><a href="mailto:reclutamiento@almpes.com">reclutamiento@almpes.com</a></li>
         </ul>
       </div>
     </div>

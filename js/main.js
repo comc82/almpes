@@ -1,4 +1,4 @@
-/* ALMPES — Interacciones */
+/* ALMPES — Interacciones + Seguridad de formularios */
 (function(){
   /* Year */
   var y=document.getElementById('year');
@@ -44,21 +44,6 @@
     reveals.forEach(function(el){ io.observe(el); });
   }
 
-  /* Contact form → mailto */
-  var form=document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var fd=new FormData(form);
-      var nombre=fd.get('nombre')||'';
-      var empresa=fd.get('empresa')||'';
-      var correo=fd.get('correo')||'';
-      var mensaje=fd.get('mensaje')||'';
-      var body='Nombre: '+nombre+'\nEmpresa: '+empresa+'\nCorreo: '+correo+'\n\n'+mensaje;
-      window.location.href='mailto:contactos@almpes.com?subject=Contacto desde web — '+encodeURIComponent(nombre)+'&body='+encodeURIComponent(body);
-    });
-  }
-
   /* Smooth anchor offset for sticky header */
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener('click',function(e){
@@ -72,5 +57,292 @@
         }
       }
     });
+  });
+
+  /* ═══════════════════════════════════════
+     FORMULARIOS — Seguridad y validación
+     ═══════════════════════════════════════ */
+
+  /* Timestamp anti-bot: formulario cargado en t0 */
+  var loadTime=Date.now();
+  document.querySelectorAll('.form-ts').forEach(function(el){
+    el.value=String(loadTime);
+  });
+
+  /* Sanitización: strip HTML, limitar caracteres peligrosos */
+  function sanitize(str){
+    if(typeof str!=='string') return'';
+    return str
+      .replace(/<[^>]*>/g,'')
+      .replace(/["'`;\\]/g,'')
+      .replace(/javascript:/gi,'')
+      .replace(/on\w+\s*=/gi,'')
+      .replace(/\{[\s\S]*\}/g,'')
+      .trim();
+  }
+
+  /* Validación de email */
+  function isValidEmail(e){
+    return/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);
+  }
+
+  /* Validación de teléfono (peruano: 7-15 dígitos, espacios, guiones, +) */
+  function isValidPhone(p){
+    if(!p) return true; /* opcional */
+    return/^[\d\s\-\+]{7,15}$/.test(p);
+  }
+
+  /* Validación de archivo adjunto */
+  var allowedTypes=['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+  var allowedExts=['.pdf','.doc','.docx'];
+  var maxSize=5*1024*1024; /* 5 MB */
+
+  function isValidFile(input){
+    if(!input.files||!input.files.length) return{valid:true};
+    var file=input.files[0];
+    if(file.size>maxSize) return{valid:false,msg:'El archivo pesa más de 5 MB. Comprimilo o elegí uno más liviano.'};
+    var ext='.'+file.name.split('.').pop().toLowerCase();
+    if(allowedExts.indexOf(ext)===-1) return{valid:false,msg:'Este formato no se acepta. Subí tu CV en PDF, DOC o DOCX.'};
+    if(allowedTypes.indexOf(file.type)===-1) return{valid:false,msg:'El tipo de archivo no es válido. Solo se permiten PDF, DOC y DOCX.'};
+    return{valid:true};
+  }
+
+  /* Mostrar error en campo */
+  function showError(field,msg){
+    field.closest('.field').classList.add('field--error');
+    var existing=field.closest('.field').querySelector('.field-msg');
+    if(!existing){
+      var span=document.createElement('span');
+      span.className='field-msg';
+      span.textContent=msg;
+      field.closest('.field').appendChild(span);
+    } else {
+      existing.textContent=msg;
+    }
+  }
+
+  /* Limpiar error de campo */
+  function clearError(field){
+    field.closest('.field').classList.remove('field--error');
+    var msg=field.closest('.field').querySelector('.field-msg');
+    if(msg) msg.remove();
+  }
+
+  /* Limpiar error de select */
+  function clearSelectError(select){
+    select.closest('.field').classList.remove('field--error');
+    var msg=select.closest('.field').querySelector('.field-msg');
+    if(msg) msg.remove();
+  }
+
+  /* Mensaje general de error */
+  function setFormError(form,msg){
+    var el=form.querySelector('.form-error');
+    if(el) el.textContent=msg;
+  }
+
+  function clearFormError(form){
+    var el=form.querySelector('.form-error');
+    if(el) el.textContent='';
+  }
+
+  /* Rate limit: mínimo 3 segundos entre envíos */
+  var lastSubmit={};
+
+  /* Validar y enviar formulario */
+  function setupForm(formId,validators){
+    var form=document.getElementById(formId);
+    if(!form) return;
+
+    /* Limpiar errores al escribir */
+    form.querySelectorAll('input,textarea,select').forEach(function(el){
+      el.addEventListener('input',function(){ clearError(el); });
+      el.addEventListener('change',function(){ clearSelectError(el); });
+    });
+
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      clearFormError(form);
+
+      /* Rate limit */
+      var now=Date.now();
+      if(lastSubmit[formId]&&(now-lastSubmit[formId]<3000)){
+        setFormError(form,'Esperá un momento antes de enviar otra vez.');
+        return;
+      }
+
+      /* Honeypot check */
+      var hp=form.querySelector('[name="_formsubmit_honeypot"]');
+      if(hp&&hp.value){
+        /* Bot detectado — simular éxito sin enviar */
+        setFormError(form,'');
+        form.innerHTML='<p style="text-align:center;color:var(--accent);font-weight:600;">¡Gracias! Tu mensaje ha sido enviado.</p>';
+        return;
+      }
+
+      /* Timestamp check: si se envió en menos de 2 segundos, es bot */
+      var ts=form.querySelector('.form-ts');
+      if(ts&&ts.value){
+        var elapsed=now-parseInt(ts.value,10);
+        if(elapsed<2000){
+          setFormError(form,'Por favor completá el formulario antes de enviar.');
+          return;
+        }
+      }
+
+      /* Validaciones por campo */
+      var valid=true;
+      validators(form,{
+        set:function(field,msg){ showError(field,msg); valid=false; },
+        clear:clearError
+      });
+
+      if(!valid){
+        setFormError(form,'Revisá los campos que están marcados en rojo.');
+        return;
+      }
+
+      /* Sanitizar todos los campos de texto antes de enviar */
+      form.querySelectorAll('input[type="text"],textarea').forEach(function(el){
+        if(!el.name.startsWith('_')) el.value=sanitize(el.value);
+      });
+
+      /* Validar archivo adjunto si existe */
+      var fileInput=form.querySelector('input[type="file"]');
+      if(fileInput&&fileInput.files&&fileInput.files.length){
+        var fileCheck=isValidFile(fileInput);
+        if(!fileCheck.valid){
+          showError(fileInput,fileCheck.msg);
+          setFormError(form,'Revisá los campos marcados.');
+          return;
+        }
+      }
+
+      /* Deshabilitar botón para evitar doble envío */
+      var btn=form.querySelector('button[type="submit"]');
+      if(btn){
+        btn.disabled=true;
+        btn.textContent='Enviando...';
+      }
+
+      /* Rate limit timestamp */
+      lastSubmit[formId]=Date.now();
+
+      /* Enviar vía AJAX para controlar la respuesta */
+      var fd=new FormData(form);
+      var xhr=new XMLHttpRequest();
+      xhr.open('POST',form.action,true);
+      xhr.onload=function(){
+        if(xhr.status>=200&&xhr.status<400){
+          form.innerHTML='<p style="text-align:center;color:var(--accent);font-weight:600;">¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.</p>';
+        } else {
+          setFormError(form,'No se pudo enviar. Verificá tu conexión y intentá de nuevo.');
+          if(btn){
+            btn.disabled=false;
+            btn.textContent=btn.dataset.original||'Enviar';
+          }
+        }
+      };
+      xhr.onerror=function(){
+        setFormError(form,'No tenés conexión a internet. Revisá tu red y volvé a intentar.');
+        if(btn){
+          btn.disabled=false;
+          btn.textContent=btn.dataset.original||'Enviar';
+        }
+      };
+      xhr.send(fd);
+    });
+  }
+
+  /* Guardar texto original del botón */
+  document.querySelectorAll('button[type="submit"]').forEach(function(btn){
+    btn.dataset.original=btn.textContent;
+  });
+
+  /* ── Formulario de Contacto ── */
+  setupForm('contact-form',function(form,v){
+    var nombre=form.querySelector('#nombre');
+    if(nombre&&nombre.value.trim().length===0){
+      v.set(nombre,'¿Cómo te llamás? Ingresá tu nombre.');
+    } else if(nombre&&nombre.value.trim().length<2){
+      v.set(nombre,'El nombre debe tener al menos 2 caracteres.');
+    }
+
+    var empresa=form.querySelector('#empresa');
+    if(empresa&&empresa.value.trim().length>100){
+      v.set(empresa,'El nombre de la empresa es demasiado largo (máx. 100).');
+    }
+
+    var correo=form.querySelector('#correo');
+    if(correo&&correo.value.trim().length===0){
+      v.set(correo,'Necesitamos tu correo para responderte.');
+    } else if(correo&&!isValidEmail(correo.value)){
+      v.set(correo,'El correo no parece válido. Revisalo y volvé a intentar.');
+    }
+
+    var servicio=form.querySelector('#servicio');
+    if(servicio&&!servicio.value){
+      servicio.closest('.field').classList.add('field--error');
+      var existing=servicio.closest('.field').querySelector('.field-msg');
+      if(!existing){
+        var span=document.createElement('span');
+        span.className='field-msg';
+        span.textContent='¿Qué servicio te interesa? Elegí una opción.';
+        servicio.closest('.field').appendChild(span);
+      }
+      v.clear(servicio);
+    }
+
+    var mensaje=form.querySelector('#mensaje');
+    if(mensaje&&mensaje.value.trim().length===0){
+      v.set(mensaje,'Contanos qué necesitás, así te podemos ayudar.');
+    } else if(mensaje&&mensaje.value.trim().length<10){
+      v.set(mensaje,'El mensaje es muy corto. Contanos un poco más (mín. 10 caracteres).');
+    } else if(mensaje&&mensaje.value.trim().length>2000){
+      v.set(mensaje,'El mensaje es muy largo. Intentá resumirlo (máx. 2000 caracteres).');
+    }
+  });
+
+  /* ── Formulario de Postulación ── */
+  setupForm('jobs-form',function(form,v){
+    var nombre=form.querySelector('#nombre');
+    if(nombre&&nombre.value.trim().length===0){
+      v.set(nombre,'¿Cómo te llamás? Escribí tu nombre completo.');
+    } else if(nombre&&nombre.value.trim().length<2){
+      v.set(nombre,'El nombre debe tener al menos 2 caracteres.');
+    }
+
+    var telefono=form.querySelector('#telefono');
+    if(telefono&&telefono.value.trim().length>0&&!isValidPhone(telefono.value)){
+      v.set(telefono,'El formato del teléfono no es válido. Usá solo números, espacios o guiones.');
+    }
+
+    var correo=form.querySelector('#correo');
+    if(correo&&correo.value.trim().length===0){
+      v.set(correo,'Necesitamos tu correo para contactarte.');
+    } else if(correo&&!isValidEmail(correo.value)){
+      v.set(correo,'El correo no parece válido. Revisalo y volvé a intentar.');
+    }
+
+    var area=form.querySelector('#area');
+    if(area&&!area.value){
+      area.closest('.field').classList.add('field--error');
+      var existing=area.closest('.field').querySelector('.field-msg');
+      if(!existing){
+        var span=document.createElement('span');
+        span.className='field-msg';
+        span.textContent='¿En qué área te gustaría trabajar? Elegí una opción.';
+        area.closest('.field').appendChild(span);
+      }
+      v.clear(area);
+    }
+
+    var cvFile=form.querySelector('#cv-file');
+    if(cvFile&&cvFile.files&&cvFile.files.length){
+      var fileResult=isValidFile(cvFile);
+      if(!fileResult.valid){
+        v.set(cvFile,fileResult.msg);
+      }
+    }
   });
 })();
