@@ -94,7 +94,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
 }
 
 /* ── Section ── */
-.section{ padding:100px 0; position:relative; }
+.section{ padding:40px 0; position:relative; margin-bottom: 30px;}
 .section--tight{ padding:72px 0; }
 .section--alt{ background:var(--bg-warm); }
 .section--dark{ background:var(--accent); color:var(--white); }
@@ -217,11 +217,11 @@ p{ margin: 0 0 1em; color: var(--muted); }
 }
 .hero-bg{
   position:absolute; inset:0; z-index:0;
-  background: url('../assets/hero-bg.jpg') right center/cover no-repeat;
+  background: image-set(url('../assets/hero-bg.webp') type('image/webp'), url('../assets/hero-bg.jpg') type('image/jpeg')) right center/cover no-repeat;
 }
 .hero-bg-2{
   position:absolute; inset:0; z-index:0;
-  background: url('../assets/hero-2.jpg') right center/cover no-repeat;
+  background: image-set(url('../assets/hero-2.webp') type('image/webp'), url('../assets/hero-2.jpg') type('image/jpeg')) right center/cover no-repeat;
   opacity:0;
   animation:hero-slide 12s ease-in-out infinite;
 }
