@@ -217,11 +217,11 @@ p{ margin: 0 0 1em; color: var(--muted); }
 }
 .hero-bg{
   position:absolute; inset:0; z-index:0;
-  background: url('../assets/hero-bg.webp') right center/cover no-repeat;
+  background: url('../assets/hero-2.webp') right center/cover no-repeat;
 }
 .hero-bg-2{
   position:absolute; inset:0; z-index:0;
-  background: url('../assets/hero-2.webp') right center/cover no-repeat;
+  background: url('../assets/hero-bg.webp') right center/cover no-repeat;
   opacity:0;
   animation:hero-slide 12s ease-in-out infinite;
 }
