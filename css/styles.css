@@ -354,6 +354,33 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .mv-card p{ margin:0; font-size:15px; line-height:1.7; }
 
 /* ── Why choose us ── */
+.section--why-bg{
+  position:relative;
+  background: url('../assets/img/why-bg.png') center center / cover no-repeat;
+  padding:80px 0;
+  overflow:hidden;
+}
+.section--why-bg::before{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.80) 0%, rgba(250,248,246,0.68) 100%);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  z-index:0;
+}
+.section--why-bg .container{ position:relative; z-index:1; }
+.section--why-bg .why-item{
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(45,32,36,0.15);
+  box-shadow: 0 12px 32px -8px rgba(45,32,36,0.12);
+  transition: all .3s var(--ease);
+}
+.section--why-bg .why-item:hover{
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px -12px rgba(130,47,50,0.18);
+}
 .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:20px; }
 .why-item{
   padding:32px; background:var(--white); border-radius:var(--radius);
