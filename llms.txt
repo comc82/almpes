@@ -1,0 +1,34 @@
+# ALMPES Contact Center
+
+## Company
+ALMPES Contact Center es una empresa peruana de servicios BPO y call center con más de 10 años de experiencia, ubicada en Miraflores, Lima, Perú.
+
+## Services
+- **Atención al Cliente (Inbound):** Atención y gestión de reclamos, soporte técnico, gestión de correos, chat en vivo.
+- **Gestión de Ventas (Outbound):** Telemarketing, cobranza telefónica, encuestas de satisfacción, programación de citas, verificación de datos.
+- **Asesoría Especializada:** Dimensionamiento de plataformas, asesoría en call center, implementación de sistemas de gestión de calidad.
+- **Infraestructura Dedicada:** Servidores dedicados, hosting administrado, monitoreo y soporte para campañas de contact center.
+
+## Contact
+- Teléfono: (01) 748-1008
+- WhatsApp: +51 914 860 068
+- Email: contactos@almpes.com
+- Email de reclutamiento: reclutamiento@almpes.com
+- Dirección: Calle Bolívar 472, Miraflores 15074, Lima, Perú
+- Horario: Lunes a sábado de 9:00 a.m. a 6:00 p.m.
+
+## Social Media
+- Facebook: https://facebook.com/almpes/
+- Instagram: https://www.instagram.com/almpesperu/
+- TikTok: https://www.tiktok.com/@almpescontactcenter
+
+## Pages
+- Inicio: /
+- Nosotros: /nosotros.html
+- Servicios: /servicios.html
+- Atención al Cliente: /inbound.html
+- Gestión de Ventas: /outbound.html
+- Asesoría Especializada: /consultoria.html
+- Infraestructura Dedicada: /hosting.html
+- Trabaja con Nosotros: /trabaja.html
+- Contáctenos: /contacto.html
