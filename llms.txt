@@ -21,6 +21,7 @@ ALMPES Contact Center es una empresa peruana de servicios BPO y call center con 
 - Facebook: https://facebook.com/almpes/
 - Instagram: https://www.instagram.com/almpesperu/
 - TikTok: https://www.tiktok.com/@almpescontactcenter
+- LinkedIn: https://www.linkedin.com/company/almpes-contact-center/
 
 ## Pages
 - Inicio: /
