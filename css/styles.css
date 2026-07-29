@@ -225,8 +225,8 @@ p{ margin: 0 0 1em; color: var(--muted); }
   background: url('../assets/hero-bg.webp') right center/cover no-repeat;
   opacity:0;
   animation:
-    hero-bg-2-in .9s var(--ease) .3s both,
-    hero-slide 12s ease-in-out 1.8s infinite;
+    hero-bg-2-in .9s var(--ease) 3s both,
+    hero-slide 12s ease-in-out 4.2s infinite;
 }
 @keyframes hero-zoom-in{
   from{ opacity:0; transform:scale(1.12); }
@@ -269,14 +269,14 @@ p{ margin: 0 0 1em; color: var(--muted); }
 }
 .hero-text-slide--1{
   animation:
-    hero-text-init-out 1.2s ease-out 0s 1 forwards,
-    hero-text-loop-1 12s ease-in-out 1.8s infinite;
+    hero-text-init-out 1.2s ease-out 3s 1 forwards,
+    hero-text-loop-1 12s ease-in-out 4.2s infinite;
 }
 .hero-text-slide--2{
   opacity:0;
   animation:
-    hero-text-init-in 0.6s ease-in 1.2s 1 forwards,
-    hero-text-loop-2 12s ease-in-out 1.8s infinite;
+    hero-text-init-in 0.6s ease-in 3s 1 forwards,
+    hero-text-loop-2 12s ease-in-out 4.2s infinite;
 }
 @keyframes hero-text-init-out{
   0%{ opacity:1; }
@@ -287,14 +287,14 @@ p{ margin: 0 0 1em; color: var(--muted); }
   100%{ opacity:1; }
 }
 @keyframes hero-text-loop-1{
-  0%,20%{ opacity:0; }
-  30%,70%{ opacity:1; }
-  80%,100%{ opacity:0; }
+  0%,25%{ opacity:0; }
+  35%,75%{ opacity:1; }
+  85%,100%{ opacity:0; }
 }
 @keyframes hero-text-loop-2{
-  0%,20%{ opacity:1; }
-  30%,70%{ opacity:0; }
-  80%,100%{ opacity:1; }
+  0%,25%{ opacity:1; }
+  35%,75%{ opacity:0; }
+  85%,100%{ opacity:1; }
 }
 
 .hero .hero-grid > div .hero-text-slide > .eyebrow{
