@@ -822,6 +822,11 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .form-card h2{ font-size:22px; }
 .form-hint{ font-size:12px; color:var(--muted); margin-top:12px; text-align:center; }
 .plan-features{ margin-top:16px; display:grid; gap:8px; list-style:none; padding:0; }
+.policy-content{ max-width:72ch; font-size:16px; line-height:1.8; }
+.policy-content p{ margin-bottom:20px; }
+.policy-content ul{ padding-left:24px; margin-bottom:24px; }
+.policy-content li{ margin-bottom:12px; line-height:1.7; }
+.policy-date{ font-size:14px; color:var(--muted); font-style:italic; }
 .plan-features li{ display:flex; gap:8px; align-items:flex-start; font-size:14px; color:var(--muted); }
 .plan-features .arrow{ color:var(--accent); font-weight:700; flex-shrink:0; }
 .plan-features + .btn,
