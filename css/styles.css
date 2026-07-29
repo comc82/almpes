@@ -434,6 +434,15 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .mv-card .eyebrow{ margin-bottom:12px; }
 .mv-card h3{ font-size:18px; margin-bottom:12px; }
 .mv-card p{ margin:0; font-size:15px; line-height:1.7; }
+.mv-card .sede-address{ font-weight:600; color:var(--fg); margin-bottom:8px; }
+.mv-card .sede-desc{ color:var(--fg-sub); margin-bottom:20px; }
+.mv-card .sede-link{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:14px; font-weight:600;
+  color:var(--accent); text-decoration:none;
+  transition:color .2s;
+}
+.mv-card .sede-link:hover{ color:var(--accent-hover); }
 
 /* ── Why choose us ── */
 .section--why-bg{
