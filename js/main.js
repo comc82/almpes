@@ -323,4 +323,61 @@
       }
     }
   });
+
+  /* ── Contador Numérico Animado (Stats Counter) ── */
+  var counterEls = document.querySelectorAll('.counter-value');
+  if (counterEls.length) {
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var target = entry.target;
+          var countTo = parseInt(target.getAttribute('data-target'), 10);
+          var prefix = target.getAttribute('data-prefix') || '';
+          var suffix = target.getAttribute('data-suffix') || '';
+          var duration = 1800;
+          var stepTime = 30;
+          var steps = duration / stepTime;
+          var increment = countTo / steps;
+          var current = 0;
+          var timer = setInterval(function() {
+            current += increment;
+            if (current >= countTo) {
+              current = countTo;
+              clearInterval(timer);
+            }
+            target.textContent = prefix + Math.floor(current).toLocaleString('es-PE') + suffix;
+          }, stepTime);
+          counterObserver.unobserve(target);
+        }
+      });
+    }, { threshold: 0.4 });
+    counterEls.forEach(function(el) { counterObserver.observe(el); });
+  }
+
+  /* ── Filtrado de Pestañas de Servicios ── */
+  var serviceTabs = document.querySelectorAll('.svc-tab-btn');
+  var serviceCards = document.querySelectorAll('.service-card-item');
+  if (serviceTabs.length && serviceCards.length) {
+    serviceTabs.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var category = btn.getAttribute('data-filter');
+        serviceTabs.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        serviceCards.forEach(function(card) {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = '';
+            card.style.opacity = '';
+            card.style.transform = '';
+            card.classList.add('visible');
+          } else {
+            card.classList.remove('visible');
+            card.style.display = 'none';
+            card.style.opacity = '';
+            card.style.transform = '';
+          }
+        });
+      });
+    });
+  }
 })();
+
