@@ -90,7 +90,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
 }
 .eyebrow::before{
   content:""; width:6px; height:6px; border-radius:50%;
-  background:var(--white);
+  background:var(--rose-lt);
 }
 
 /* ── Section ── */
