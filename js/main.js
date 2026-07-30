@@ -15,12 +15,16 @@
     });
   }
 
-  /* Sub-menu toggle on mobile */
+  /* Sub-menu toggle on mobile: first tap opens, second tap navigates */
   document.querySelectorAll('.has-sub > a').forEach(function(link){
     link.addEventListener('click',function(e){
       if(window.innerWidth<=768){
+        var parent=link.parentElement;
+        if(parent.classList.contains('open')){
+          return; /* sub-menu ya abierto — permitir navegación */
+        }
         e.preventDefault();
-        link.parentElement.classList.toggle('open');
+        parent.classList.add('open');
       }
     });
   });
@@ -354,6 +358,27 @@
     counterEls.forEach(function(el) { counterObserver.observe(el); });
   }
 
+  /* ── Modal de certificados ── */
+  var modal=document.getElementById('cert-modal');
+  var modalImg=modal&&modal.querySelector('.modal-img');
+  var modalClose=modal&&modal.querySelector('.modal-close');
+  if(modal&&modalImg&&modalClose){
+    document.querySelectorAll('.cert-view').forEach(function(el){
+      el.addEventListener('click',function(){
+        modalImg.src=el.getAttribute('data-cert');
+        modal.classList.add('open');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function closeModal(){
+      modal.classList.remove('open');
+      document.body.style.overflow='';
+    }
+    modalClose.addEventListener('click',closeModal);
+    modal.addEventListener('click',function(e){ if(e.target===modal) closeModal(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeModal(); });
+  }
+
   /* ── Filtrado de Pestañas de Servicios ── */
   var serviceTabs = document.querySelectorAll('.svc-tab-btn');
   var serviceCards = document.querySelectorAll('.service-card-item');
@@ -379,5 +404,39 @@
       });
     });
   }
+
+  /* ── Slider de sedes ── */
+  document.querySelectorAll('.sede-slider').forEach(function(slider){
+    var name=slider.getAttribute('data-slider');
+    var slides=slider.querySelectorAll('.sede-slide');
+    var dotsContainer=document.querySelector('.sede-dots[data-slider="'+name+'"]');
+    if(!slides.length||!dotsContainer) return;
+    var current=0;
+    slides.forEach(function(s,i){
+      var dot=document.createElement('span');
+      dot.className='sede-dot'+(i===0?' active':'');
+      dot.addEventListener('click',function(){ go(i); });
+      dotsContainer.appendChild(dot);
+    });
+    function go(i){
+      if(i===current) return;
+      current=i;
+      slider.style.transform='translateX(-'+(current*100)+'%)';
+      dotsContainer.querySelectorAll('.sede-dot').forEach(function(d,j){
+        d.classList.toggle('active',j===current);
+      });
+    }
+    var timer=setInterval(function(){
+      var next=(current+1)%slides.length;
+      go(next);
+    },4000);
+    slider.closest('.sede-img').addEventListener('mouseenter',function(){ clearInterval(timer); });
+    slider.closest('.sede-img').addEventListener('mouseleave',function(){
+      timer=setInterval(function(){
+        var next=(current+1)%slides.length;
+        go(next);
+      },4000);
+    });
+  });
 })();
 

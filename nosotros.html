@@ -6,7 +6,7 @@
 <title>Nosotros — ALMPES Contact Center</title>
 <meta name="description" content="Conoce a ALMPES Contact Center: nuestra misión, visión y el equipo detrás de la gestión de tus procesos de negocio en Lima, Perú.">
 <link rel="icon" href="assets/favicon.ico">
-<link rel="preload" href="assets/img/nosotros-hero.webp" as="image" type="image/webp">
+<link rel="preload" href="assets/oficina.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,18 +14,12 @@
 <header class="site-header" data-od-id="site-header">
   <div class="container nav-wrap">
     <a href="index.html" class="brand">
-      <img src="assets/logo-almpes.png" alt="ALMPES Contact Center">
+      <img src="assets/logo-almpes.webp" alt="ALMPES Contact Center">
     </a>
     <nav class="nav-main">
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li class="has-sub">
-          <a href="nosotros.html" class="active">Nosotros</a>
-          <ul class="sub-menu">
-            <li><a href="politica-sistema-integrado-gestion.html">Política del Sistema Integrado de Gestión</a></li>
-            <li><a href="politica-diversidad-inclusion.html">Política de Diversidad e Inclusión</a></li>
-          </ul>
-        </li>
+        <li><a href="nosotros.html" class="active">Nosotros</a></li>
         <li class="has-sub">
           <a href="servicios.html">Servicios</a>
           <ul class="sub-menu">
@@ -60,7 +54,7 @@
       </p>
     </div>
     <div class="hero-img reveal reveal-delay-1 reveal-right">
-      <img src="assets/img/nosotros-hero.webp" alt="Equipo ALMPES trabajando en oficina" loading="eager">
+      <img src="assets/oficina.webp" alt="Nuestra oficina" loading="eager">
     </div>
   </div>
 </section>
@@ -92,16 +86,28 @@
     </div>
     <div class="mv-grid">
       <div class="mv-card reveal reveal-left">
+        <div class="sede-img">
+          <div class="sede-slider" data-slider="miraflores">
+            <div class="sede-slide"><img src="assets/miraflores1.webp" alt="Oficina Miraflores" loading="lazy"></div>
+            <div class="sede-slide"><img src="assets/miraflores2.webp" alt="Oficina Miraflores" loading="lazy"></div>
+          </div>
+          <div class="sede-dots" data-slider="miraflores"></div>
+        </div>
         <h3>Miraflores</h3>
         <p class="sede-address">Calle Bolívar 472, Miraflores 15074</p>
         <p class="sede-desc">Oficina principal — administración, consultoría y reuniones comerciales.</p>
-        <a href="https://maps.google.com/?q=Calle+Bolívar+472+Miraflores+15074+Perú" class="sede-link" target="_blank" rel="noopener">Ver en Google Maps →</a>
       </div>
       <div class="mv-card reveal reveal-delay-1 reveal-right">
+        <div class="sede-img">
+          <div class="sede-slider" data-slider="sanmartin">
+            <div class="sede-slide"><img src="assets/sanmartin1.webp" alt="Centro de operaciones San Martín de Porres" loading="lazy"></div>
+            <div class="sede-slide"><img src="assets/sanmartin2.webp" alt="Centro de operaciones San Martín de Porres" loading="lazy"></div>
+          </div>
+          <div class="sede-dots" data-slider="sanmartin"></div>
+        </div>
         <h3>San Martín de Porres</h3>
         <p class="sede-address">Av. Lima Mz I Lt 15, San Martín de Porres</p>
         <p class="sede-desc">Centro de operaciones — atención al cliente, ventas y operaciones BPO.</p>
-        <a href="https://maps.google.com/?q=Av.+Lima+Mz+I+Lt+15+San+Martin+de+Porres+Lima+Perú" class="sede-link" target="_blank" rel="noopener">Ver en Google Maps →</a>
       </div>
     </div>
   </div>
@@ -146,6 +152,7 @@
           <span class="cert-code">ISO 9001:2015</span>
           <span class="cert-title">Gestión de Calidad Multicanal</span>
           <span class="cert-body">Auditoría NQA 804729 · Válido hasta Dic 2028</span>
+          <span class="cert-view" data-cert="assets/certificadoiso9001.webp">Ver certificado →</span>
         </div>
       </div>
       <div class="cert-card reveal reveal-delay-1">
@@ -154,6 +161,7 @@
           <span class="cert-code">ISO/IEC 27001:2022</span>
           <span class="cert-title">Seguridad de la Información</span>
           <span class="cert-body">Auditoría NQA 804730 · Válido hasta Dic 2028</span>
+          <span class="cert-view" data-cert="assets/certificadoiso27001.webp">Ver certificado →</span>
         </div>
       </div>
       <div class="cert-card reveal reveal-delay-2">
@@ -165,6 +173,33 @@
           <span class="cert-body">Reconocimiento a la excelencia operativa en BPO</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-od-id="policies-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal reveal-left">Políticas institucionales</span>
+      <h2 class="reveal reveal-delay-1 reveal-left">Documentos de gestión</h2>
+    </div>
+    <div class="mv-grid">
+      <a href="politica-sistema-integrado-gestion.html" class="mv-card policy-card reveal reveal-left">
+        <span class="policy-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </span>
+        <h3>Política del Sistema Integrado de Gestión</h3>
+        <p>Calidad, seguridad, medio ambiente, anti-soborno, seguridad de la información y ciberseguridad.</p>
+        <span class="policy-card-link">Leer documento →</span>
+      </a>
+      <a href="politica-diversidad-inclusion.html" class="mv-card policy-card reveal reveal-delay-1">
+        <span class="policy-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3>Política de Diversidad e Inclusión</h3>
+        <p>Igualdad de oportunidades, no discriminación y cultura inclusiva en el entorno laboral.</p>
+        <span class="policy-card-link">Leer documento →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -199,11 +234,18 @@
   </div>
 </section>
 
+<div class="modal-overlay" id="cert-modal">
+  <div class="modal-wrap">
+    <button class="modal-close" aria-label="Cerrar">&times;</button>
+    <img class="modal-img" src="" alt="Certificado">
+  </div>
+</div>
+
 <footer class="site-footer reveal" data-od-id="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo-almpes.png" alt="ALMPES Contact Center">
+        <img src="assets/logo-almpes.webp" alt="ALMPES Contact Center">
         <p>Empresa dedicada a la búsqueda de soluciones de negocio, mejorando la comunicación entre tu empresa y tus usuarios finales.</p>
         <div class="social-links">
           <a href="https://facebook.com/almpes/" target="_blank" rel="noopener" aria-label="Facebook">
