@@ -479,12 +479,17 @@
         if (dir > 0) ecSwiper.slideNext(); else ecSwiper.slidePrev();
       }, 1100);
     };
+    var ecSupportsHover = window.matchMedia('(hover: hover)').matches;
     expandingRoot.querySelectorAll('.ec-hover-zone').forEach(function(zone){
       var isNext = zone.classList.contains('ec-hover-zone--next');
-      zone.addEventListener('mouseenter', function(){ startEcHoverNav(isNext ? 1 : -1); });
-      zone.addEventListener('mouseleave', stopEcHoverNav);
+      zone.addEventListener('pointerenter', function(e){
+        if (!ecSupportsHover || (e.pointerType && e.pointerType !== 'mouse')) return;
+        startEcHoverNav(isNext ? 1 : -1);
+      });
+      zone.addEventListener('pointerleave', stopEcHoverNav);
       zone.addEventListener('click', function(){
-        if (window.matchMedia('(hover: none)').matches){
+        stopEcHoverNav();
+        if (!ecSupportsHover){
           if (isNext) ecSwiper.slideNext(); else ecSwiper.slidePrev();
         }
       });
