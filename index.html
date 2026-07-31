@@ -157,7 +157,6 @@
         <div class="hero-stat">
           <span class="counter-value" data-target="100" data-prefix="+" data-suffix="K">+100K</span>
           <span class="hero-stat-label">Contactos / mes</span>
-        </div>
       </div>
     </div>
   </div>
@@ -220,7 +219,7 @@
   </div>
 </section>
 
-<!-- Propuesta 3: Grid Interactivo de 6 Servicios -->
+<!-- Propuesta 3: Slider Expanding Collection de 6 Servicios -->
 <section class="section" data-od-id="services-section">
   <div class="container">
     <div class="section-head center">
@@ -228,117 +227,122 @@
       <h2 class="reveal reveal-delay-1 reveal-left">Portafolio integral de operaciones y tecnología</h2>
       <p class="reveal reveal-delay-2">Cubrimos cada punto de contacto con tus clientes: recepción de llamadas, prospección activa, ventas digitales, gestión presencial e infraestructura dedicada.</p>
     </div>
+  </div>
 
-    <div class="svc-filter-tabs reveal">
-      <button class="svc-tab-btn active" data-filter="all">Todos los Servicios (6)</button>
-      <button class="svc-tab-btn" data-filter="operativo">Operaciones & Ventas</button>
-      <button class="svc-tab-btn" data-filter="tech">Tecnología & Hosting</button>
-      <button class="svc-tab-btn" data-filter="campo">Campo & Consultoría</button>
+  <div class="expanding-collection" data-od-id="services-slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="expanding-collection-container">
+            <div class="expanding-collection-content">
+              <div class="expanding-collection-content-inner">
+                <div class="ec-panel">
+                  <p>Recepción de llamadas, resolución de reclamos, soporte técnico multinivel, help desk y atención omnicanal (chat y correo).</p>
+                  <a href="inbound.html" class="svc-link">Conocer servicio →</a>
+                </div>
+              </div>
+            </div>
+            <div class="expanding-collection-cover">
+              <img src="assets/img/svc-atencion.webp" alt="Atención al Cliente" loading="lazy">
+              <span class="ec-cover-title">Atención al Cliente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="expanding-collection-container">
+            <div class="expanding-collection-content">
+              <div class="expanding-collection-content-inner">
+                <div class="ec-panel">
+                  <p>Campañas de telemarketing de alta conversión, recuperación de cartera / cobranzas, encuestas de satisfacción y agendamiento de citas.</p>
+                  <a href="outbound.html" class="svc-link">Conocer servicio →</a>
+                </div>
+              </div>
+            </div>
+            <div class="expanding-collection-cover">
+              <img src="assets/img/svc-ventas-h.webp" alt="Gestión de Ventas" loading="lazy">
+              <span class="ec-cover-title">Gestión de Ventas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="expanding-collection-container">
+            <div class="expanding-collection-content">
+              <div class="expanding-collection-content-inner">
+                <div class="ec-panel">
+                  <p>Captación de leads en redes sociales (Facebook/Instagram Ads), nutrición vía WhatsApp/Email y cierre con ejecutivos de ventas.</p>
+                  <a href="venta-digital.html" class="svc-link">Conocer servicio →</a>
+                </div>
+              </div>
+            </div>
+            <div class="expanding-collection-cover">
+              <img src="assets/img/venta-digital-hero.webp" alt="Venta Digital y Redes Sociales" loading="lazy">
+              <span class="ec-cover-title">Venta Digital &amp; RRSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="expanding-collection-container">
+            <div class="expanding-collection-content">
+              <div class="expanding-collection-content-inner">
+                <div class="ec-panel">
+                  <p>Operaciones presenciales de entrega y recojo de documentación contractual, encuestas presenciales y fuerza de ventas en ruta.</p>
+                  <a href="campo.html" class="svc-link">Conocer servicio →</a>
+                </div>
+              </div>
+            </div>
+            <div class="expanding-collection-cover">
+              <img src="assets/img/campo-hero.webp" alt="Gestión en Campo" loading="lazy">
+              <span class="ec-cover-title">Gestión en Campo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="expanding-collection-container">
+            <div class="expanding-collection-content">
+              <div class="expanding-collection-content-inner">
+                <div class="ec-panel">
+                  <p>Servidores dedicados administrados, alta disponibilidad en Microsoft Azure y Hyper-V, respaldos en nube y VPNs seguras.</p>
+                  <a href="hosting.html" class="svc-link">Conocer servicio →</a>
+                </div>
+              </div>
+            </div>
+            <div class="expanding-collection-cover">
+              <img src="assets/img/svc-infra.webp" alt="Infraestructura Dedicada" loading="lazy">
+              <span class="ec-cover-title">Hosting &amp; Cloud BPO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="expanding-collection-container">
+            <div class="expanding-collection-content">
+              <div class="expanding-collection-content-inner">
+                <div class="ec-panel">
+                  <p>Dimensionamiento de plataformas in-house, auditorías de calidad, consultoría en telefonía VoIP y sistemas SGSI.</p>
+                  <a href="consultoria.html" class="svc-link">Conocer servicio →</a>
+                </div>
+              </div>
+            </div>
+            <div class="expanding-collection-cover">
+              <img src="assets/img/svc-asesoria.webp" alt="Consultoría BPO" loading="lazy">
+              <span class="ec-cover-title">Consultoría BPO</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="services-grid-6">
-      <div class="service-card-item svc-style--border-top card-bg--atencion card-bg-var--e reveal reveal-left" data-category="operativo">
-        <div class="card-top">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <span class="svc-badge">Inbound</span>
-        </div>
-        <h3>Atención al Cliente</h3>
-        <p>Recepción de llamadas, resolución de reclamos, soporte técnico multinivel, help desk y atención omnicanal (chat y correo).</p>
-        <ul class="svc-list">
-          <li>Atención de reclamos y consultas</li>
-          <li>Soporte técnico y Mesa de Ayuda</li>
-          <li>Gestión omnicanal (Email & Chat)</li>
-        </ul>
-        <a href="inbound.html" class="svc-link">Conocer servicio →</a>
-      </div>
-
-      <div class="service-card-item svc-style--border-top card-bg--ventas card-bg-var--e reveal reveal-delay-1" data-category="operativo">
-        <div class="card-top">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </div>
-          <span class="svc-badge">Outbound</span>
-        </div>
-        <h3>Gestión de Ventas</h3>
-        <p>Campañas de telemarketing de alta conversión, recuperación de cartera / cobranzas, encuestas de satisfacción y agendamiento de citas.</p>
-        <ul class="svc-list">
-          <li>Telemarketing y venta cruzada</li>
-          <li>Gestión de cobranza preventiva</li>
-          <li>Agendamiento y auditoría de citas</li>
-        </ul>
-        <a href="outbound.html" class="svc-link">Conocer servicio →</a>
-      </div>
-
-      <div class="service-card-item svc-style--border-top card-bg--digital card-bg-var--e reveal reveal-delay-2 reveal-right" data-category="operativo">
-        <div class="card-top">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </div>
-          <span class="svc-badge">Social Selling</span>
-        </div>
-        <h3>Venta Digital & RRSS</h3>
-        <p>Captación de leads en redes sociales (Facebook/Instagram Ads), nutrición vía WhatsApp/Email y cierre con ejecutivos de ventas.</p>
-        <ul class="svc-list">
-          <li>Diseño de campañas y flyers</li>
-          <li>Gestión y calificación de leads</li>
-          <li>Seguimiento automático vía WhatsApp</li>
-        </ul>
-        <a href="outbound.html" class="svc-link">Conocer servicio →</a>
-      </div>
-
-      <div class="service-card-item svc-style--border-top card-bg--campo card-bg-var--e reveal reveal-left" data-category="campo">
-        <div class="card-top">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <span class="svc-badge">Presencial</span>
-        </div>
-        <h3>Gestión en Campo</h3>
-        <p>Operaciones presenciales de entrega y recojo de documentación contractual, encuestas presenciales y fuerza de ventas en ruta.</p>
-        <ul class="svc-list">
-          <li>Entrega y firma de documentos</li>
-          <li>Ventas presenciales en campo</li>
-          <li>Encuestas de verificación física</li>
-        </ul>
-        <a href="servicios.html" class="svc-link">Conocer servicio →</a>
-      </div>
-
-      <div class="service-card-item svc-style--border-top card-bg--hosting card-bg-var--e reveal reveal-delay-1" data-category="tech">
-        <div class="card-top">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          </div>
-          <span class="svc-badge">Infraestructura</span>
-        </div>
-        <h3>Hosting & Cloud BPO</h3>
-        <p>Servidores dedicados administrados, alta disponibilidad en Microsoft Azure y Hyper-V, respaldos en nube y VPNs seguras.</p>
-        <ul class="svc-list">
-          <li>Servidores dedicados y virtualización</li>
-          <li>Ciberseguridad Fortinet & VPN</li>
-          <li>Monitoreo 24/7 de alta disponibilidad</li>
-        </ul>
-        <a href="hosting.html" class="svc-link">Conocer servicio →</a>
-      </div>
-
-      <div class="service-card-item svc-style--border-top card-bg--consultoria card-bg-var--e reveal reveal-delay-2 reveal-right" data-category="campo">
-        <div class="card-top">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 12 8"/></svg>
-          </div>
-          <span class="svc-badge">Estrategia</span>
-        </div>
-        <h3>Consultoría BPO</h3>
-        <p>Dimensionamiento de plataformas in-house, auditorías de calidad, consultoría en telefonía VoIP y sistemas SGSI.</p>
-        <ul class="svc-list">
-          <li>Dimensionamiento de Contact Center</li>
-          <li>Auditorías de speech y calidad</li>
-          <li>Implementación de normas ISO</li>
-        </ul>
-        <a href="consultoria.html" class="svc-link">Conocer servicio →</a>
-      </div>
-    </div>
+    <button class="ec-hover-zone ec-hover-zone--prev" type="button" aria-label="Servicio anterior">
+      <span class="ec-zone-arrow" aria-hidden="true">&#8249;</span>
+    </button>
+    <button class="ec-hover-zone ec-hover-zone--next" type="button" aria-label="Siguiente servicio">
+      <span class="ec-zone-arrow" aria-hidden="true">&#8250;</span>
+    </button>
   </div>
 </section>
 
@@ -467,6 +471,7 @@
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.14.82.84-3.06-.19-.31a8.11 8.11 0 0 1-1.24-4.25c0-4.48 3.65-8.12 8.14-8.12 4.48 0 8.12 3.64 8.12 8.12 0 4.48-3.65 8.11-8.09 8.11Zm4.47-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
 </a>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
