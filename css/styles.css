@@ -149,6 +149,9 @@ p{ margin: 0 0 1em; color: var(--muted); }
 }
 .brand{ display:flex; align-items:center; gap:12px; }
 .brand img{ height:40px; width:auto; }
+@media (min-width:1025px){
+  .brand img{ height:50px; }
+}
 
 .nav-main{ display:flex; align-items:center; gap:36px; }
 .nav-main > ul{ display:flex; align-items:center; gap:32px; }
