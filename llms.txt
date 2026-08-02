@@ -36,6 +36,6 @@ ALMPES Contact Center es una empresa peruana de servicios BPO y call center con 
 - Asesoría Especializada: /consultoria.html
 - Infraestructura Dedicada: /hosting.html
 - Trabaja con Nosotros: /trabaja.html
-- Contáctenos: /contacto.html
+- Contáctanos: /contacto.html
 - Política de Diversidad e Inclusión: /politica-diversidad-inclusion.html
 - Política del Sistema Integrado de Gestión: /politica-sistema-integrado-gestion.html
