@@ -331,7 +331,8 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .hero .hero-grid > div .hero-text-slide > .eyebrow{
   animation:hero-eyebrow-in .65s var(--ease) .3s both;
 }
-.hero .hero-grid > div .hero-text-slide > h1{
+.hero .hero-grid > div .hero-text-slide > h1,
+.hero .hero-grid > div .hero-text-slide > h2{
   animation:hero-title-in .85s var(--ease) .4s both;
 }
 .hero .hero-grid > div .hero-text-slide > .hero-lead{
@@ -370,11 +371,13 @@ p{ margin: 0 0 1em; color: var(--muted); }
   from{ opacity:0; transform:translateY(20px); }
   to  { opacity:1; transform:translateY(0); }
 }
-.hero h1{
+.hero h1,
+.hero h2{
   font-size:clamp(2.6rem, 4.5vw, 3.8rem);
   line-height:1.08; letter-spacing:-0.03em;
 }
-.hero h1 em{
+.hero h1 em,
+.hero h2 em{
   font-style:normal; color:var(--accent);
   text-decoration:underline; text-decoration-color:rgba(130,47,50,0.25);
   text-underline-offset:6px; text-decoration-thickness:3px;
@@ -1012,7 +1015,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
   .hero .hero-grid{
     max-width:100%; position:relative; z-index:2;
   }
-  .hero h1{ font-size:clamp(1.8rem, 7vw, 2.4rem); }
+  .hero h1, .hero h2{ font-size:clamp(1.8rem, 7vw, 2.4rem); }
   .hero-lead{ font-size:15px; }
   .nav-main{
     position:fixed; top:66px; left:0; right:0;
@@ -1202,33 +1205,67 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .service-card[class*="card-bg--"] .tag{ color: var(--rose-lt); }
 .service-card[class*="card-bg--"]:hover{ border-color: rgba(255,255,255,0.25); background: transparent; }
 
-.card-bg--atencion{ --card-img: url('../assets/img/svc-atencion.webp'); }
-.card-bg--ventas{ --card-img: url('../assets/img/svc-ventas.webp'); }
+.card-bg--atencion{ --card-img: url('../assets/img/svc-atencion-v2.webp'); }
+.card-bg--ventas{ --card-img: url('../assets/img/svc-ventas-v2.webp'); }
 .card-bg--digital{ --card-img: url('../assets/img/venta-digital-hero.webp'); }
 .card-bg--campo{ --card-img: url('../assets/img/campo-hero.webp'); }
-.card-bg--hosting{ --card-img: url('../assets/img/svc-infra.webp'); }
-.card-bg--consultoria{ --card-img: url('../assets/img/svc-asesoria.webp'); }
+.card-bg--hosting{ --card-img: url('../assets/img/svc-infra-v2.webp'); }
+.card-bg--consultoria{ --card-img: url('../assets/img/svc-consultoria-v2.webp'); }
 
 
-/* ── Card bg: guinda overlay, invert on hover ── */
+/* ── Card bg: image full color, white translucent boxes, guinda on hover ── */
 .service-card.card-bg-var--e{ background: transparent; }
 .service-card.card-bg-var--e::before{
-  background: linear-gradient(180deg, rgba(130,47,50,0.7) 0%, rgba(130,47,50,0.88) 100%), var(--card-img) center/cover;
-  transition: opacity 0.4s ease;
+  background: var(--card-img) center/cover;
 }
-.service-card.card-bg-var--e h3{ color: var(--white); }
-.service-card.card-bg-var--e p{ color: rgba(255,255,255,0.75); }
-.service-card.card-bg-var--e .go{ color: var(--white); }
-.service-card.card-bg-var--e .icon-wrap{ background: rgba(255,255,255,0.15); color: var(--white); }
-.service-card.card-bg-var--e .tag{ color: var(--rose-lt); }
+.service-card.card-bg-var--e::after{
+  background: linear-gradient(180deg, rgba(130,47,50,0.55) 0%, rgba(130,47,50,0.9) 100%);
+}
+.service-card.card-bg-var--e .icon-wrap{
+  background: rgba(255,255,255,0.7); color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.service-card.card-bg-var--e .tag{
+  background: rgba(255,255,255,0.65); color: var(--rose);
+  padding: 6px 10px; border-radius: 6px; width: fit-content;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.service-card.card-bg-var--e h3{
+  background: rgba(255,255,255,0.65); color: var(--fg);
+  padding: 6px 12px; border-radius: 6px; width: fit-content;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.service-card.card-bg-var--e p{
+  background: rgba(255,255,255,0.65); color: var(--fg);
+  padding: 10px 12px; border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.service-card.card-bg-var--e .go{
+  background: rgba(255,255,255,0.7); color: var(--accent);
+  padding: 8px 12px; border-radius: 6px; width: fit-content;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.service-card.card-bg-var--e .icon-wrap,
+.service-card.card-bg-var--e .tag,
+.service-card.card-bg-var--e h3,
+.service-card.card-bg-var--e p,
+.service-card.card-bg-var--e .go{
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
 
-.service-card.card-bg-var--e:hover::before{ opacity: 0; }
-.service-card.card-bg-var--e:hover{ background: var(--white); border-color: var(--accent); }
-.service-card.card-bg-var--e:hover h3{ color: var(--accent); }
-.service-card.card-bg-var--e:hover p{ color: var(--fg); }
-.service-card.card-bg-var--e:hover .go{ color: var(--accent); }
-.service-card.card-bg-var--e:hover .icon-wrap{ background: var(--accent); color: var(--white); }
-.service-card.card-bg-var--e:hover .tag{ color: var(--accent); }
+.service-card.card-bg-var--e:hover{ background: transparent; border-color: transparent; }
+.service-card.card-bg-var--e:hover .icon-wrap,
+.service-card.card-bg-var--e:hover .tag,
+.service-card.card-bg-var--e:hover h3,
+.service-card.card-bg-var--e:hover p,
+.service-card.card-bg-var--e:hover .go{
+  background: transparent; box-shadow: none;
+}
+.service-card.card-bg-var--e:hover h3{ color: var(--white); }
+.service-card.card-bg-var--e:hover p{ color: rgba(255,255,255,0.85); }
+.service-card.card-bg-var--e:hover .go{ color: var(--white); }
+.service-card.card-bg-var--e:hover .tag{ color: var(--rose-lt); }
+.service-card.card-bg-var--e:hover .icon-wrap{ background: rgba(255,255,255,0.15); color: var(--white); }
 
 /* ── Swiper core (self-contained) ── */
 .swiper{ margin-left:auto; margin-right:auto; position:relative; overflow:hidden; list-style:none; padding:0; z-index:1; display:block; }
@@ -1269,7 +1306,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .expanding-collection-cover::after{
   content:""; position:absolute; inset:0; z-index:2;
   border-radius:var(--radius); pointer-events:none;
-  background:linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(130,47,50,0.25) 55%, rgba(130,47,50,0.72) 100%);
+  background:linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);
 }
 .ec-cover-title{
   position:absolute; z-index:3;

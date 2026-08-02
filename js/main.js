@@ -435,6 +435,7 @@
     var ecSwiper = new Swiper(expandingRoot.querySelector('.swiper'), {
       speed: 600,
       resistanceRatio: 0,
+      initialSlide: 1,
       slidesPerView: 'auto',
       centeredSlides: true,
       spaceBetween: 28,
@@ -489,9 +490,7 @@
       zone.addEventListener('pointerleave', stopEcHoverNav);
       zone.addEventListener('click', function(){
         stopEcHoverNav();
-        if (!ecSupportsHover){
-          if (isNext) ecSwiper.slideNext(); else ecSwiper.slidePrev();
-        }
+        if (isNext) ecSwiper.slideNext(); else ecSwiper.slidePrev();
       });
     });
   }
