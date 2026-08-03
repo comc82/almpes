@@ -12,8 +12,7 @@ ALMPES Contact Center es una empresa peruana de servicios BPO y call center con 
 - **Infraestructura Dedicada:** Servidores dedicados, hosting administrado, monitoreo y soporte para campañas de contact center.
 
 ## Contact
-- Teléfono: (01) 748-1008
-- WhatsApp: +51 914 104 466
+- Teléfono: +51 914 104 466
 - Email: contactos@almpes.com
 - Email de reclutamiento: reclutamiento@almpes.com
 - Dirección: Calle Bolívar 472, Miraflores 15074, Lima, Perú

@@ -248,6 +248,10 @@ p{ margin: 0 0 1em; color: var(--muted); }
   from{ opacity:0; transform:translateX(50px); }
   to  { opacity:1; transform:translateX(0); }
 }
+
+/* ── Hero mobile img + overlay (hidden on desktop, shown on mobile) ── */
+.hero-bg-img,
+.hero-bg-overlay{ display:none; }
 @keyframes hero-slide{
   0%,20%{ opacity:1; }
   30%,70%{ opacity:0; }
@@ -948,9 +952,6 @@ p{ margin: 0 0 1em; color: var(--muted); }
 /* ── Responsive ── */
 @media (max-width:1024px){
   .hero .hero-grid{ max-width:100%; }
-/* ── Hero mobile img + overlay (hidden on desktop) ── */
-.hero-bg-img,
-.hero-bg-overlay{ display:none; }
 
 .hero::before{
     background:linear-gradient(to right, #FFFFFF 0%, #FFFFFF 30%, rgba(255,255,255,0.6) 40%, transparent 52%);
