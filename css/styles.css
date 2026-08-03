@@ -772,7 +772,7 @@ p{ margin: 0 0 1em; color: var(--muted); }
   contain-intrinsic-size:auto 400px;
 }
 .footer-grid{ display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:44px; margin-bottom:44px; }
-.footer-brand img{ height:36px; margin-bottom:16px; filter:brightness(0) invert(1); opacity:.8; }
+.footer-brand img{ height:36px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1); opacity:.8; }
 .footer-brand p{ font-size:13.5px; max-width:34ch; line-height:1.6; }
 .social-links{ display:flex; gap:12px; margin-top:16px; }
 .social-links a{
