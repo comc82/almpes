@@ -53,35 +53,50 @@
 
 <header class="site-header" data-od-id="site-header">
   <div class="container nav-wrap">
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-drawer"><span></span><span></span><span></span></button>
     <a href="index.html" class="brand">
       <img src="assets/logo-almpes.webp" alt="ALMPES Contact Center" width="346" height="85" loading="eager">
     </a>
-    <nav class="nav-main">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li class="has-sub">
-          <a href="servicios.html">Servicios</a>
-          <ul class="sub-menu">
-            <li><a href="inbound.html">Atención al Cliente</a></li>
-            <li><a href="outbound.html">Gestión de Ventas</a></li>
-            <li><a href="venta-digital.html">Venta Digital & RRSS</a></li>
-            <li><a href="campo.html">Gestión en Campo</a></li>
-            <li><a href="consultoria.html">Asesoría Especializada</a></li>
-            <li><a href="hosting.html">Infraestructura Dedicada</a></li>
-          </ul>
-        </li>
-        <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
-                <li><a href="contacto.html" class="active">Contáctanos</a></li>
-      </ul>
-    </nav>
     <div class="header-actions">
-
-      <a href="https://api.whatsapp.com/send?phone=51914104466&text=HolaAlmpes" class="btn btn--accent btn--sm" target="_blank" rel="noopener">Escríbenos</a>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="trabaja.html" class="btn btn--ghost btn--sm">Trabaja con nosotros</a>
+      <a href="contacto.html" class="btn btn--accent btn--sm">Contáctanos</a>
     </div>
   </div>
 </header>
+
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <div class="nav-drawer-head">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-almpes.webp" alt="ALMPES Contact Center" width="346" height="85" loading="eager">
+    </a>
+  </div>
+  <nav class="nav-main" aria-label="Menú principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li class="has-sub">
+          <a>Servicios<span class="sub-arrow"></span></a>
+          <ul class="sub-menu">
+            <li><a href="inbound.html">Atención al Cliente</a></li>
+            <li><a href="outbound.html">Gestión de Ventas</a></li>
+            <li><a href="venta-digital.html">Venta Digital &amp; RRSS</a></li>
+            <li><a href="campo.html">Gestión en Campo</a></li>
+            <li><a href="consultoria.html">Asesoría Especializada</a></li>
+            <li><a href="hosting.html">Infraestructura Dedicada</a></li>
+            <li><a href="servicios.html">Ver todos los servicios</a></li>
+          </ul>
+        </li>
+      <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+      <li><a href="contacto.html" class="active">Contáctanos</a></li>
+    </ul>
+  </nav>
+  <div class="nav-drawer-foot">
+    <a href="trabaja.html" class="btn btn--accent btn--full">Trabaja con nosotros</a>
+    <a href="contacto.html" class="btn btn--ghost btn--full">Contáctanos</a>
+  </div>
+</div>
+<div class="nav-overlay"></div>
+
 <main>
 
 <section class="section section--compact-bottom" data-od-id="contact-hero">
