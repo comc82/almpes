@@ -956,7 +956,7 @@ body.nav-locked{ overflow:hidden; }
 .page-hero{ max-width:22ch; font-size:clamp(2rem,3.8vw,3rem); }
 .page-hero.h1--narrow{ max-width:16ch; }
 .page-hero-lead{ max-width:48ch; font-size:17px; }
-.page-hero-lead--wide{ max-width:60ch; }
+.page-hero-lead--wide{ max-width:50ch; }
 .eyebrow--accent{ color:var(--accent); }
 .eyebrow--rose{ color:var(--rose-lt); }
 .eyebrow--gray{ color:var(--gray); }
