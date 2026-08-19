@@ -272,7 +272,18 @@ p{ margin: 0 0 1em; color: var(--muted); }
 .nav-drawer.open{ transform:translateX(0); }
 .nav-drawer-head{
   display:flex; align-items:center; justify-content:center;
-  padding:20px 24px;
+  padding:20px 24px; position:relative;
+}
+.nav-close{
+  position:absolute; top:16px; right:16px;
+  background:none; border:none; color:rgba(255,255,255,0.8);
+  padding:6px; border-radius:var(--radius-sm);
+  transition:color .2s, background .2s;
+  display:none;
+}
+.nav-close:hover{ color:#fff; background:rgba(255,255,255,0.12); }
+@media (max-width:1024px){
+  .nav-close{ display:flex; align-items:center; justify-content:center; }
 }
 .nav-drawer .nav-main{ padding:28px 24px; flex:1; }
 .nav-drawer .nav-main a{ color:rgba(255,255,255,0.94); }
