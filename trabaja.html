@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ALMPES Contact Center">
 <meta property="og:locale" content="es_PE">
@@ -70,14 +70,14 @@
       <img src="assets/logo-almpes-white.webp" alt="ALMPES Contact Center" width="346" height="85" loading="eager">
     </a>
     <button class="nav-close" aria-label="Cerrar menú">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
   <nav class="nav-main" aria-label="Menú principal">
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li class="has-sub">
-        <a>¿Porqué ALMPES?<span class="sub-arrow"></span></a>
+        <a href="#" role="button">¿Por qué ALMPES?<span class="sub-arrow"></span></a>
         <ul class="sub-menu">
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="politica-sistema-integrado-gestion.html">Política del Sistema Integrado de Gestión</a></li>
@@ -85,17 +85,18 @@
         </ul>
       </li>
       <li class="has-sub">
-          <a>Servicios<span class="sub-arrow"></span></a>
+          <a href="#" role="button">Servicios<span class="sub-arrow"></span></a>
           <ul class="sub-menu">
             <li><a href="inbound.html">Atención al Cliente</a></li>
             <li><a href="outbound.html">Gestión de Ventas</a></li>
-            <li><a href="venta-digital.html">Venta Digital &amp; RRSS</a></li>
+            <li><a href="venta-digital.html">Venta Digital &amp; Redes Sociales</a></li>
             <li><a href="campo.html">Gestión en Campo</a></li>
             <li><a href="consultoria.html">Asesoría Especializada</a></li>
             <li><a href="hosting.html">Infraestructura Dedicada</a></li>
             <li><a href="servicios.html">Ver todos los servicios</a></li>
           </ul>
         </li>
+      <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
     </ul>
   </nav>
   <div class="nav-drawer-foot">
@@ -103,16 +104,16 @@
     <a href="contacto.html" class="btn btn--ghost btn--full">Contáctanos</a>
     <div class="social-links">
       <a href="https://facebook.com/almpes/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
       <a href="https://www.instagram.com/almpesperu/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
       </a>
       <a href="https://www.tiktok.com/@almpescontactcenter" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
       </a>
       <a href="https://www.linkedin.com/company/almpes-contact-center/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
     </div>
   </div>
@@ -133,59 +134,176 @@
 
 <section class="section section--alt" data-od-id="jobs-why">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
       <span class="eyebrow reveal reveal-left">Por qué ALMPES</span>
-      <h2 class="reveal reveal-delay-1 reveal-left">Un lugar para crecer</h2>
+      <h2 class="reveal reveal-delay-1 reveal-left">Un lugar para crecer y potenciar tu talento</h2>
+      <p class="reveal reveal-delay-2">Ofrecemos estabilidad laboral, clima corporativo inclusivo y capacitación constante desde el primer día.</p>
     </div>
     <div class="why-grid">
-      <div class="why-item reveal">
-        <img src="assets/img/trabaja-capacitacion.webp" alt="Capacitación en ALMPES" class="why-img" width="600" height="400" loading="lazy">
-        <span class="num">01</span>
-        <h4>Capacitación continua</h4>
-        <p>Te formamos desde el primer día en atención al cliente, manejo de herramientas y procesos de calidad.</p>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <span class="why-num">01</span>
+        </div>
+        <h3>Capacitación Continua</h3>
+        <p>Te formamos desde el primer día en técnicas de atención, habilidades comerciales, herramientas de IA y procesos de calidad ISO.</p>
       </div>
-      <div class="why-item reveal reveal-delay-1">
-        <img src="assets/img/trabaja-crecimiento.webp" alt="Crecimiento profesional" class="why-img" width="600" height="400" loading="lazy">
-        <span class="num">02</span>
-        <h4>Crecimiento real</h4>
-        <p>Promovemos desde dentro. Muchos de nuestros líderes comenzaron como agentes en el teléfono.</p>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <span class="why-num">02</span>
+        </div>
+        <h3>Línea de Carrera Real</h3>
+        <p>Promovemos el talento interno. Más del 70% de nuestros coordinadores, supervisores y analistas de calidad iniciaron como asesores.</p>
       </div>
-      <div class="why-item reveal reveal-delay-2">
-        <img src="assets/img/trabaja-ambiente.webp" alt="Ambiente de trabajo" class="why-img" width="600" height="337" loading="lazy">
-        <span class="num">03</span>
-        <h4>Buen ambiente</h4>
-        <p>Operamos en equipos pequeños, con trato directo y horarios que respetan tu tiempo personal.</p>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="why-num">03</span>
+        </div>
+        <h3>Excelente Clima Laboral</h3>
+        <p>Ambiente seguro, dinámico y respetuoso con descansos programados, actividades de integración y beneficios de ley completos desde el inicio.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          </div>
+          <span class="why-num">04</span>
+        </div>
+        <h3>Horarios Flexibles</h3>
+        <p>Turnos fijos (mañana o tarde) que te permiten balancear tu trabajo con tus estudios o compromisos personales.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" data-od-id="jobs-apply">
+<!-- Módulo de Vacantes Disponibles -->
+<section class="section vacantes-section" data-od-id="jobs-vacancies">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow reveal reveal-left">Oportunidades Laborales</span>
+      <h2 class="reveal reveal-delay-1 reveal-left">Vacantes Disponibles</h2>
+      <p class="reveal reveal-delay-2">Explora nuestras convocatorias activas y postula directamente a la posición que mejor se ajuste a tu perfil.</p>
+    </div>
+
+    <div class="vacantes-grid">
+      <div class="vacante-card reveal reveal-delay-1">
+        <div class="vacante-header">
+          <div>
+            <h3 class="vacante-title">Ejecutivo de Televentas Outbound</h3>
+            <span class="vacante-campaign">Campaña Sector Financiero &amp; Tarjetas</span>
+          </div>
+          <span class="vacante-status">Convocatoria Abierta</span>
+        </div>
+        <div class="vacante-tags">
+          <span class="vacante-tag">📍 Sede SMP</span>
+          <span class="vacante-tag">⏰ Full Time (L-S)</span>
+          <span class="vacante-tag">💼 Presencial</span>
+        </div>
+        <p class="vacante-desc">Responsable de contactar a clientes potenciales para colocación de préstamos y tarjetas. Requerimos facilidad de palabra y vocación comercial.</p>
+        <div class="vacante-footer">
+          <span class="vacante-salary">Sueldo Básico + Comisiones sin tope + Planilla completa</span>
+          <button type="button" class="btn btn--accent btn--sm vacante-apply-btn" data-area="gestion-de-ventas">Postular a esta vacante →</button>
+        </div>
+      </div>
+
+      <div class="vacante-card reveal reveal-delay-2">
+        <div class="vacante-header">
+          <div>
+            <h3 class="vacante-title">Asesor de Atención al Cliente (Inbound)</h3>
+            <span class="vacante-campaign">Campaña Telecomunicaciones &amp; Servicios</span>
+          </div>
+          <span class="vacante-status">Convocatoria Abierta</span>
+        </div>
+        <div class="vacante-tags">
+          <span class="vacante-tag">📍 Sede Miraflores / SMP</span>
+          <span class="vacante-tag">⏰ Full Time / Part Time</span>
+          <span class="vacante-tag">💼 Presencial</span>
+        </div>
+        <p class="vacante-desc">Recepción de llamadas, resolución de consultas, reclamos y soporte a usuarios finales. Buscamos empatía, escucha activa y orientación al servicio.</p>
+        <div class="vacante-footer">
+          <span class="vacante-salary">Sueldo Fijo + Bono de Desempeño + Beneficios de Ley</span>
+          <button type="button" class="btn btn--accent btn--sm vacante-apply-btn" data-area="atencion-al-cliente">Postular a esta vacante →</button>
+        </div>
+      </div>
+
+      <div class="vacante-card reveal reveal-delay-3">
+        <div class="vacante-header">
+          <div>
+            <h3 class="vacante-title">Gestor Telefónico de Cobranzas</h3>
+            <span class="vacante-campaign">Campaña Cartera Financiera &amp; Retail</span>
+          </div>
+          <span class="vacante-status">Convocatoria Abierta</span>
+        </div>
+        <div class="vacante-tags">
+          <span class="vacante-tag">📍 Sede San Martín de Porres</span>
+          <span class="vacante-tag">⏰ Full Time</span>
+          <span class="vacante-tag">💼 Presencial</span>
+        </div>
+        <p class="vacante-desc">Gestión telefónica de cobranza temprana y tardía, negociación de acuerdos de pago y seguimiento de compromisos crediticios.</p>
+        <div class="vacante-footer">
+          <span class="vacante-salary">Sueldo Fijo + Atractivas Bonificaciones por Recuperación</span>
+          <button type="button" class="btn btn--accent btn--sm vacante-apply-btn" data-area="gestion-de-ventas">Postular a esta vacante →</button>
+        </div>
+      </div>
+
+      <div class="vacante-card reveal reveal-delay-4">
+        <div class="vacante-header">
+          <div>
+            <h3 class="vacante-title">Supervisor / Team Leader de Operaciones</h3>
+            <span class="vacante-campaign">Operación BPO Multicanal</span>
+          </div>
+          <span class="vacante-status">Convocatoria Abierta</span>
+        </div>
+        <div class="vacante-tags">
+          <span class="vacante-tag">📍 Sede Miraflores</span>
+          <span class="vacante-tag">⏰ Full Time</span>
+          <span class="vacante-tag">💼 Presencial</span>
+        </div>
+        <p class="vacante-desc">Liderazgo de equipo, monitoreo de métricas en tiempo real (AHT, FCR, SLAs), coaching de asesores y presentación de reportes a clientes.</p>
+        <div class="vacante-footer">
+          <span class="vacante-salary">Remuneración competitiva acorde a experiencia</span>
+          <button type="button" class="btn btn--accent btn--sm vacante-apply-btn" data-area="administracion">Postular a esta vacante →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulario de Postulación -->
+<section class="section" id="postula" data-od-id="jobs-apply">
   <div class="container">
     <div class="contact-grid">
       <div>
         <div class="section-head">
           <span class="eyebrow reveal reveal-left">Postula ahora</span>
-          <h2 class="reveal reveal-delay-1 reveal-left">Envíanos tu CV</h2>
-          <p class="reveal reveal-delay-2">Completa el formulario y nos pondremos en contacto contigo cuando tengamos una posición que se ajuste a tu perfil.</p>
+          <h2 class="reveal reveal-delay-1 reveal-left">Envíanos tus datos y CV</h2>
+          <p class="reveal reveal-delay-2">Completa el formulario seleccionando tu puesto de interés. Nuestro equipo de Gestión Humana revisará tu perfil y te contactará para una entrevista.</p>
         </div>
         <div class="contact-card contact-card--mt reveal">
           <div class="contact-row">
             <span class="ic">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4Z"/><path d="m22 6-10 7L2 6"/></svg>
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4Z"/><path d="m22 6-10 7L2 6"/></svg>
             </span>
             <div>
-              <b>Correo de reclutamiento</b>
+              <b>Correo de Gestión Humana</b>
               <a href="mailto:reclutamiento@almpes.com">reclutamiento@almpes.com</a>
             </div>
           </div>
           <div class="contact-row">
             <span class="ic">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
             </span>
             <div>
-              <b>WhatsApp directo</b>
-              <a href="https://api.whatsapp.com/send?phone=51904371429&text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20vacantes%20en%20ALMPES." target="_blank" rel="noopener">904 371 429</a>
+              <b>WhatsApp de Selección</b>
+              <a href="https://wa.me/51914104466?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20vacantes%20en%20ALMPES." target="_blank" rel="noopener">914 104 466</a>
             </div>
           </div>
         </div>
@@ -193,10 +311,10 @@
 
       <div class="form-card reveal reveal-delay-1">
         <span class="eyebrow">Formulario de postulación</span>
-        <h2>Cuéntanos sobre ti</h2>
+        <h2>Ingresa tu postulación</h2>
         <form id="jobs-form" action="https://formsubmit.co/reclutamiento@almpes.com" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_subject" value="Nueva postulación desde la web">
+          <input type="hidden" name="_subject" value="Nueva postulación laboral desde la web">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_max_file_size" value="5242880">
           <div class="form-hp" aria-hidden="true">
@@ -206,73 +324,82 @@
           <div class="field-row">
             <div class="field">
               <div class="field-label"><label for="nombre">Nombre completo</label></div>
-              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" maxlength="100" pattern=".{2,100}">
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos" maxlength="100" pattern=".{2,100}" autocomplete="name">
               <div class="field-msg" data-for="nombre"></div>
             </div>
             <div class="field">
-              <div class="field-label"><label for="telefono">Teléfono</label></div>
-              <input type="tel" id="telefono" name="telefono" placeholder="914 000 000" pattern="[\d\s\-\+]{7,15}" maxlength="15">
+              <div class="field-label"><label for="telefono">Teléfono / Celular</label></div>
+              <input type="tel" id="telefono" name="telefono" required placeholder="914 000 000" pattern="[\d\s\-\+]{7,15}" maxlength="15" autocomplete="tel">
               <div class="field-msg" data-for="telefono"></div>
             </div>
           </div>
           <div class="field">
-            <div class="field-label"><label for="correo">Correo</label></div>
-            <input type="email" id="correo" name="correo" required placeholder="tucorreo@email.com" maxlength="150">
+            <div class="field-label"><label for="correo">Correo electrónico</label></div>
+            <input type="email" id="correo" name="correo" required placeholder="tucorreo@email.com" maxlength="150" autocomplete="email">
             <div class="field-msg" data-for="correo"></div>
           </div>
           <div class="field">
-            <div class="field-label"><label for="area">Área de interés</label></div>
+            <div class="field-label"><label for="area">Puesto o área a la que postulas</label></div>
             <select id="area" name="area" required>
-              <option value="">Selecciona un área</option>
-              <option value="atencion-al-cliente">Atención al Cliente</option>
-              <option value="gestion-de-ventas">Gestión de Ventas</option>
-              <option value="soporte-tecnico">Soporte Técnico</option>
-              <option value="administracion">Administración</option>
-              <option value="otro">Otro</option>
+              <option value="">Selecciona una opción</option>
+              <option value="gestion-de-ventas">Ejecutivo de Televentas / Cobranzas</option>
+              <option value="atencion-al-cliente">Asesor de Atención al Cliente</option>
+              <option value="soporte-tecnico">Soporte Técnico / Help Desk</option>
+              <option value="administracion">Supervisión / Administración</option>
+              <option value="otro">Otro puesto</option>
             </select>
             <div class="field-msg" data-for="area"></div>
           </div>
           <div class="field">
-            <div class="field-label"><label for="experiencia">Experiencia previa</label></div>
-            <textarea id="experiencia" name="experiencia" rows="3" placeholder="Cuéntanos brevemente tu experiencia laboral" maxlength="1500"></textarea>
+            <div class="field-label"><label for="experiencia">Experiencia o breve presentación</label></div>
+            <textarea id="experiencia" name="experiencia" rows="3" placeholder="Cuéntanos brevemente sobre tu experiencia laboral previa en contact center o atención" maxlength="1500"></textarea>
             <div class="field-msg" data-for="experiencia"></div>
           </div>
           <div class="field">
             <div class="field-label">
-              <label for="cv-file">Adjuntar CV</label>
-              <span class="field-hint">PDF, DOC o DOCX — máx. 5 MB</span>
+              <label for="cv-file">Adjuntar Currículum Vitae (CV)</label>
+              <span class="field-hint">Formatos: PDF, DOC, DOCX — máx. 5 MB</span>
             </div>
             <input type="file" id="cv-file" name="cv-file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
             <div class="field-msg" data-for="cv-file"></div>
           </div>
+          
+          <!-- Cláusula de Privacidad y Tratamiento de Datos Personales (Ley 29733) -->
+          <div class="field field--checkbox">
+            <input type="checkbox" id="privacidad" name="privacidad" required>
+            <label for="privacidad">He leído y acepto el tratamiento de mis datos personales y CV para fines exclusivos de selección laboral conforme a la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a> de ALMPES y la Ley N° 29733.</label>
+            <div class="field-msg" data-for="privacidad"></div>
+          </div>
+
           <div class="form-error" role="alert" aria-live="polite"></div>
-          <button type="submit" class="btn btn--accent btn--full">Enviar postulación</button>
-          <p class="form-hint">Revisaremos tu perfil y te contactaremos si hay una posición compatible.</p>
+          <button type="submit" class="btn btn--accent btn--full" style="margin-top:12px;">Enviar postulación</button>
+          <p class="form-hint">Tus datos serán tratados bajo estricta confidencialidad bajo estándares ISO/IEC 27001.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
+</main>
 
 <footer class="site-footer reveal" data-od-id="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/logo-almpes.webp" alt="ALMPES Contact Center" width="346" height="85" loading="lazy">
-        <p>Empresa dedicada a la búsqueda de soluciones de negocio, mejorando la comunicación entre tu empresa y tus usuarios finales.</p>
+        <p>Empresa especializada en soluciones BPO, Contact Center, ventas omnicanal y tecnología para empresas líderes en Perú.</p>
         <div class="social-links">
           <a href="https://facebook.com/almpes/" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
           <a href="https://www.instagram.com/almpesperu/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
           </a>
           <a href="https://www.tiktok.com/@almpescontactcenter" target="_blank" rel="noopener" aria-label="TikTok">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
           </a>
           <a href="https://www.linkedin.com/company/almpes-contact-center/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
         </div>
       </div>
@@ -282,14 +409,15 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+          <li><a href="trabaja.html">Trabaja con nosotros</a></li>
           <li><a href="contacto.html">Contáctanos</a></li>
         </ul>
       </div>
       <div>
-        <h5>Contacto</h5>
+        <h5>Contacto Directo</h5>
         <ul>
-<li><a href="tel:+5117481008">(01) 748-1008</a></li>
+          <li><a href="tel:+5117481008">(01) 748-1008</a></li>
           <li><a href="tel:+51914104466">914 104 466</a></li>
           <li><a href="mailto:contactos@almpes.com">contactos@almpes.com</a></li>
           <li><a href="mailto:reclutamiento@almpes.com">reclutamiento@almpes.com</a></li>
@@ -298,14 +426,14 @@
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> ALMPES Contact Center. Todos los derechos reservados.</span>
-      <span>Servicios BPO · Call Center en Lima, Perú</span>
+      <span>Servicios BPO · Call Center en Miraflores, Lima, Perú</span>
     </div>
   </div>
-</main>
 </footer>
 
-<a href="https://api.whatsapp.com/send?phone=51914104466&text=HolaAlmpes" class="wa-float reveal" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.14.82.84-3.06-.19-.31a8.11 8.11 0 0 1-1.24-4.25c0-4.48 3.65-8.12 8.14-8.12 4.48 0 8.12 3.64 8.12 8.12 0 4.48-3.65 8.11-8.09 8.11Zm4.47-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+<a href="https://wa.me/51914104466?text=Hola%20ALMPES%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios%20BPO." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos directamente por WhatsApp">
+  <span class="wa-online-dot" title="En línea"></span>
+  <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.14.82.84-3.06-.19-.31a8.11 8.11 0 0 1-1.24-4.25c0-4.48 3.65-8.12 8.14-8.12 4.48 0 8.12 3.64 8.12 8.12 0 4.48-3.65 8.11-8.09 8.11Zm4.47-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
 </a>
 
 <script src="js/main.js"></script>

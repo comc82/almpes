@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ALMPES Contact Center">
 <meta property="og:locale" content="es_PE">
@@ -70,14 +70,14 @@
       <img src="assets/logo-almpes-white.webp" alt="ALMPES Contact Center" width="346" height="85" loading="eager">
     </a>
     <button class="nav-close" aria-label="Cerrar menú">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
   <nav class="nav-main" aria-label="Menú principal">
     <ul>
       <li><a href="index.html" class="active">Inicio</a></li>
       <li class="has-sub">
-        <a>¿Porqué ALMPES?<span class="sub-arrow"></span></a>
+        <a href="#" role="button">¿Por qué ALMPES?<span class="sub-arrow"></span></a>
         <ul class="sub-menu">
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="politica-sistema-integrado-gestion.html">Política del Sistema Integrado de Gestión</a></li>
@@ -85,17 +85,18 @@
         </ul>
       </li>
       <li class="has-sub">
-          <a>Servicios<span class="sub-arrow"></span></a>
+          <a href="#" role="button">Servicios<span class="sub-arrow"></span></a>
           <ul class="sub-menu">
             <li><a href="inbound.html">Atención al Cliente</a></li>
             <li><a href="outbound.html">Gestión de Ventas</a></li>
-            <li><a href="venta-digital.html">Venta Digital &amp; RRSS</a></li>
+            <li><a href="venta-digital.html">Venta Digital &amp; Redes Sociales</a></li>
             <li><a href="campo.html">Gestión en Campo</a></li>
             <li><a href="consultoria.html">Asesoría Especializada</a></li>
             <li><a href="hosting.html">Infraestructura Dedicada</a></li>
             <li><a href="servicios.html">Ver todos los servicios</a></li>
           </ul>
         </li>
+      <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
     </ul>
   </nav>
   <div class="nav-drawer-foot">
@@ -103,16 +104,16 @@
     <a href="contacto.html" class="btn btn--ghost btn--full">Contáctanos</a>
     <div class="social-links">
       <a href="https://facebook.com/almpes/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
       <a href="https://www.instagram.com/almpesperu/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
       </a>
       <a href="https://www.tiktok.com/@almpescontactcenter" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
       </a>
       <a href="https://www.linkedin.com/company/almpes-contact-center/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
     </div>
   </div>
@@ -121,10 +122,11 @@
 
 <main>
 
+<!-- Hero Section Directo y de Alto Impacto -->
 <section class="hero" data-od-id="hero">
   <div class="hero-bg">
-    <img src="assets/hero-2.webp" alt="" class="hero-bg-img hero-bg-img--1" width="1920" height="1277" loading="eager">
-    <img src="assets/hero-bg.webp" alt="" class="hero-bg-img hero-bg-img--2" width="1920" height="1280" loading="eager">
+    <img src="assets/hero-2.webp" alt="Operaciones ALMPES" class="hero-bg-img hero-bg-img--1" width="1920" height="1277" loading="eager">
+    <img src="assets/hero-bg.webp" alt="Contact Center ALMPES" class="hero-bg-img hero-bg-img--2" width="1920" height="1280" loading="eager">
     <div class="hero-bg-overlay">
       <span class="hero-bg-sub">BPO · Contact Center</span>
       <strong class="hero-bg-title">+11 años impulsando operaciones B2B</strong>
@@ -134,26 +136,21 @@
   <div class="container hero-grid">
     <div>
       <div class="hero-text-stack">
-        <div class="hero-text-slide hero-text-slide--1">
-          <span class="eyebrow">BPO · Contact Center</span>
-          <h1>Brindamos soluciones para gestionar llamadas, <em>ayudando a tu negocio a alcanzar sus objetivos</em>.</h1>
-          <p class="hero-lead">Atención al cliente, televentas, gestión en campo e infraestructura. Respaldados por doble certificación ISO y más de 11 años en el mercado peruano.</p>
-        </div>
-        <div class="hero-text-slide hero-text-slide--2">
-          <span class="eyebrow">BPO · Contact Center</span>
-          <h2>Diseñamos experiencias que conectan con tus clientes y <em>generan resultados para tu negocio</em>.</h2>
-          <p class="hero-lead">Atención al cliente, televentas, gestión en campo e infraestructura. Respaldados por doble certificación ISO y más de 11 años en el mercado peruano.</p>
+        <div class="hero-text-slide">
+          <span class="eyebrow">BPO &amp; Contact Center Especializado</span>
+          <h1>Conectamos con tus clientes y <em>generamos resultados para tu negocio</em>.</h1>
+          <p class="hero-lead">Contact Center BPO especializado en ventas, atención al cliente, cobranzas y tecnología a la medida, respaldado por más de 11 años de experiencia y certificaciones ISO 9001 e ISO/IEC 27001.</p>
         </div>
       </div>
       <div class="hero-ctas">
         <a href="contacto.html" class="btn btn--accent">Solicitar propuesta B2B</a>
-        <a href="https://api.whatsapp.com/send?phone=51914104466&text=Hola%20ALMPES%2C%20quisiera%20solicitar%20una%20propuesta%20comercial%20para%20mi%20empresa." class="btn btn--ghost" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        <a href="https://wa.me/51914104466?text=Hola%20ALMPES%2C%20quisiera%20solicitar%20una%20propuesta%20comercial%20para%20mi%20empresa." class="btn btn--ghost" target="_blank" rel="noopener">Hablar por WhatsApp</a>
       </div>
 
-      <!-- Propuesta 1: Hero Badges de Certificación -->
+      <!-- Badges de Certificación Oficiales -->
       <div class="hero-badges-wrap">
         <div class="hero-badges-title">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           Garantía y Acreditaciones Oficiales
         </div>
         <div class="hero-badges-grid">
@@ -161,7 +158,7 @@
             <img src="assets/NQA_ISO9001.webp" alt="ISO 9001:2015" class="hero-badge-seal" width="85" height="127" loading="eager">
             <div class="hero-badge-text">
               <b>ISO 9001:2015</b>
-              <span>Gestión de Calidad Multicanal</span>
+              <span>Gestión de Calidad Certificada</span>
             </div>
           </div>
           <div class="hero-badge-item hero-badge-item--seal">
@@ -176,12 +173,13 @@
             <img src="assets/premio2020.webp" alt="Premio Empresa Peruana 2020" class="hero-badge-award" width="97" height="67" loading="eager">
             <div class="hero-badge-text">
               <b>Empresa Peruana del Año</b>
-              <span>Ganadores 2019 & 2020</span>
+              <span>Ganadores 2019 &amp; 2020</span>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Métricas de Alto Impacto Inmediatas -->
       <div class="hero-stats-row">
         <div class="hero-stat">
           <span class="counter-value" data-target="11" data-prefix="+">+11</span>
@@ -198,35 +196,75 @@
         <div class="hero-stat">
           <span class="counter-value" data-target="100" data-prefix="+" data-suffix="K">+100K</span>
           <span class="hero-stat-label">Contactos / mes</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About / Nosotros teaser -->
-<section class="section section--alt" data-od-id="about-teaser">
+<!-- 4 Pilares Estratégicos Diferenciales -->
+<section class="section why-section" data-od-id="why-almpes">
   <div class="container">
-    <div class="about-teaser-grid">
-      <div class="about-teaser-img reveal reveal-delay-1 reveal-right">
-        <img src="assets/oficina.webp" alt="Nuestra oficina" width="1499" height="843" loading="lazy">
+    <div class="section-head center">
+      <span class="eyebrow reveal reveal-left">Propuesta Diferencial</span>
+      <h2 class="reveal reveal-delay-1 reveal-left">¿Por qué elegir a ALMPES para tu operación?</h2>
+      <p class="reveal reveal-delay-2">Combinamos infraestructura de grado empresarial, estándares internacionales y metodología orientada a resultados medibles.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="why-num">01</span>
+        </div>
+        <h3>Tecnología a la Medida</h3>
+        <p>Desarrollamos nuestras propias plataformas CRM, bots e integraciones de reportería en tiempo real, adaptadas a los flujos y requerimientos específicos de tu empresa.</p>
       </div>
-      <div class="reveal reveal-left">
-        <span class="eyebrow">Quiénes somos</span>
-        <h2>Más de 11 años impulsando operaciones B2B de alto rendimiento</h2>
-        <p>En ALMPES gestionamos la atención, ventas e infraestructura de empresas líderes en Perú. Combinamos talento humano capacitado, estándares ISO auditables y tecnología robusta para cumplir tus KPIs de negocio.</p>
-        <p>Trabajamos orientados a garantizar continuidad operativa, confidencialidad y una experiencia de usuario que fortalece el valor de tu marca.</p>
-        <a href="nosotros.html" class="btn btn--accent">Conocer más de nosotros</a>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="why-num">02</span>
+        </div>
+        <h3>Seguridad y Calidad Certificadas</h3>
+        <p>Operaciones auditadas y respaldadas bajo las normas ISO 9001:2015 (Calidad) e ISO/IEC 27001:2022 (Seguridad de la Información), garantizando estricta confidencialidad de datos.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <span class="why-num">03</span>
+        </div>
+        <h3>Operaciones Comerciales Probadas</h3>
+        <p>Más de 11 años liderando campañas de alta conversión en ventas outbound, colocación de productos financieros, telemarketing y recuperación efectiva de cartera.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-card-top">
+          <div class="why-icon">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <span class="why-num">04</span>
+        </div>
+        <h3>Flexibilidad y Escalabilidad Ágil</h3>
+        <p>Capacidad operativa para absorber picos de demanda estacionales, dimensionar plataformas rápidamente y desplegar campañas activas en menos de 15 días.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Propuesta 5: Carrusel de Clientes Top (Social Proof) -->
+<!-- Carrusel de Clientes Top (Social Proof) -->
 <section class="clients-marquee-section" data-od-id="clients-marquee-section">
-  <div class="container" >
-    <div class="section-head center" >
+  <div class="container">
+    <div class="section-head center">
       <span class="eyebrow reveal reveal-left">Empresas que confían en nosotros</span>
-      <h2 class="reveal reveal-delay-1 reveal-left" >Respaldados por los grandes líderes del mercado</h2>
+      <h2 class="reveal reveal-delay-1 reveal-left">Respaldados por los grandes líderes del mercado</h2>
     </div>
   </div>
   <div class="clients-marquee-track reveal">
@@ -250,23 +288,89 @@
     <div class="client-logo-card"><img src="assets/clientes/bancopichincha.webp" alt="Banco Pichincha" class="client-logo-img" width="689" height="196" loading="lazy"></div>
     <div class="client-logo-card"><img src="assets/clientes/crediscotia.webp" alt="CrediScotia" class="client-logo-img" width="300" height="300" loading="lazy"></div>
     <div class="client-logo-card"><img src="assets/clientes/bancoazteca.webp" alt="Banco Azteca" class="client-logo-img" width="276" height="87" loading="lazy"></div>
-    <div class="client-logo-card"><img src="assets/clientes/oncosalud.webp" alt="Oncosalud / Auna" class="client-logo-img" width="210" height="88" loading="lazy"></div>
-    <div class="client-logo-card"><img src="assets/clientes/baldecash.webp" alt="BaldeCash" class="client-logo-img" width="190" height="152" loading="lazy"></div>
-    <div class="client-logo-card"><img src="assets/clientes/mota-engil.webp" alt="Mota-Engil" class="client-logo-img" width="2563" height="1518" loading="lazy"></div>
-    <div class="client-logo-card"><img src="assets/clientes/calidda.webp" alt="Cálidda" class="client-logo-img" width="300" height="94" loading="lazy"></div>
-    <div class="client-logo-card"><img src="assets/clientes/ideoforma.webp" alt="Ideoforma" class="client-logo-img" width="364" height="112" loading="lazy"></div>
-    <div class="client-logo-card"><img src="assets/clientes/quimoleo.webp" alt="Quimoleo" class="client-logo-img" width="258" height="82" loading="lazy"></div>
-    <div class="client-logo-card"><img src="assets/clientes/sip.webp" alt="Sip" class="client-logo-img" width="108" height="108" loading="lazy"></div>
   </div>
 </section>
 
-<!-- Propuesta 3: Slider Expanding Collection de 6 Servicios -->
+<!-- Casos de Éxito & Resultados Comprobados -->
+<section class="section cases-section" data-od-id="cases-section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow reveal reveal-left">Evidencia Comercial</span>
+      <h2 class="reveal reveal-delay-1 reveal-left">Resultados concretos en operaciones de alto volumen</h2>
+      <p class="reveal reveal-delay-2">Transformamos la experiencia en KPIs tangibles de conversión, resolución y eficiencia operativa para marcas líderes.</p>
+    </div>
+
+    <div class="cases-grid">
+      <div class="case-card reveal reveal-delay-1">
+        <span class="case-sector-badge">Sector Financiero &amp; Banca</span>
+        <div class="case-metric">
+          <span class="case-metric-val counter-value" data-target="35" data-prefix="+" data-suffix="%">+35%</span>
+          <span class="case-metric-label">Incremento en Conversión de Ventas</span>
+        </div>
+        <h4>Campaña de Colocación &amp; Reactivación</h4>
+        <p>Implementación de marcación predictiva inteligente y guiones dinámicos para colocación de préstamos y tarjetas, superando la meta de colocación mensual de nuestro cliente.</p>
+        <div class="case-results-list">
+          <div class="case-result-item">
+            <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>+28% en contactabilidad efectiva</span>
+          </div>
+          <div class="case-result-item">
+            <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Auditoría de calidad ISO 9001 al 100%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-2">
+        <span class="case-sector-badge">Telecomunicaciones &amp; Servicios</span>
+        <div class="case-metric">
+          <span class="case-metric-val counter-value" data-target="25" data-prefix="-" data-suffix="%" style="color:var(--success);">-25%</span>
+          <span class="case-metric-label">Reducción en Tiempo Medio (AHT)</span>
+        </div>
+        <h4>Atención al Cliente Omnicanal &amp; Help Desk</h4>
+        <p>Reestructuración de árboles de decisión y capacitación técnica especializada para soporte al usuario final, elevando el First Contact Resolution (FCR) al 94%.</p>
+        <div class="case-results-list">
+          <div class="case-result-item">
+            <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>CSAT sostenido de 4.8 / 5.0</span>
+          </div>
+          <div class="case-result-item">
+            <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Atención integrada telefónica y chat WhatsApp</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-3">
+        <span class="case-sector-badge">Logística &amp; Operaciones en Campo</span>
+        <div class="case-metric">
+          <span class="case-metric-val counter-value" data-target="99" data-prefix="" data-suffix=".1%">99.1%</span>
+          <span class="case-metric-label">Efectividad en Validación Documental</span>
+        </div>
+        <h4>Gestión en Campo &amp; Verificaciones In Situ</h4>
+        <p>Despliegue de cuadrillas presenciales con geolocalización en tiempo real para entrega de contratos, validación de domicilios y encuestas en Lima y provincias.</p>
+        <div class="case-results-list">
+          <div class="case-result-item">
+            <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Trazabilidad fotográfica y biométrica</span>
+          </div>
+          <div class="case-result-item">
+            <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Salida en vivo en menos de 10 días útiles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slider de Soluciones BPO (Expanding Collection) -->
 <section class="section" data-od-id="services-section">
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow reveal reveal-left">Nuestras Soluciones BPO</span>
       <h2 class="reveal reveal-delay-1 reveal-left">Portafolio integral de operaciones y tecnología</h2>
-      <p class="reveal reveal-delay-2">Cubrimos cada punto de contacto con tus clientes: recepción de llamadas, prospección activa, ventas digitales, gestión presencial e infraestructura dedicada.</p>
+      <p class="reveal reveal-delay-2">Cubrimos cada punto de contacto con tus clientes: recepción de llamadas, prospección activa, ventas digitales, gestión presencial e infraestructura tecnológica.</p>
     </div>
   </div>
 
@@ -320,7 +424,7 @@
             </div>
             <div class="expanding-collection-cover">
               <img src="assets/img/venta-digital-hero.webp" alt="Venta Digital y Redes Sociales" width="2000" height="1549" loading="lazy">
-              <span class="ec-cover-title">Venta Digital &amp; RRSS</span>
+              <span class="ec-cover-title">Venta Digital &amp; Redes Sociales</span>
             </div>
           </div>
         </div>
@@ -330,7 +434,7 @@
             <div class="expanding-collection-content">
               <div class="expanding-collection-content-inner">
                 <div class="ec-panel">
-                  <p>Operaciones presenciales de entrega y recojo de documentación contractual, encuestas presenciales y fuerza de ventas en ruta.</p>
+                  <p>Ventas presenciales, cobranzas in situ, entrega de documentos contractuales y verificación domiciliaria con geolocalización.</p>
                   <a href="campo.html" class="svc-link">Conocer servicio →</a>
                 </div>
               </div>
@@ -347,14 +451,14 @@
             <div class="expanding-collection-content">
               <div class="expanding-collection-content-inner">
                 <div class="ec-panel">
-                  <p>Servidores dedicados administrados, alta disponibilidad en Microsoft Azure y Hyper-V, respaldos en nube y VPNs seguras.</p>
+                  <p>Servidores dedicados administrados, infraestructura en nube, telefonía VoIP corporativa, respaldos y redes VPN seguras.</p>
                   <a href="hosting.html" class="svc-link">Conocer servicio →</a>
                 </div>
               </div>
             </div>
             <div class="expanding-collection-cover">
-              <img src="assets/img/svc-infra-v2.webp" alt="Infraestructura Dedicada" width="600" height="400" loading="lazy">
-              <span class="ec-cover-title">Hosting &amp; Cloud BPO</span>
+              <img src="assets/img/svc-infra-v2.webp" alt="Infraestructura y Plataforma Tecnológica" width="600" height="400" loading="lazy">
+              <span class="ec-cover-title">Infraestructura Dedicada</span>
             </div>
           </div>
         </div>
@@ -371,7 +475,7 @@
             </div>
             <div class="expanding-collection-cover">
               <img src="assets/img/svc-consultoria-v2.webp" alt="Consultoría BPO" width="600" height="400" loading="lazy">
-              <span class="ec-cover-title">Consultoría BPO</span>
+              <span class="ec-cover-title">Asesoría Especializada</span>
             </div>
           </div>
         </div>
@@ -387,96 +491,171 @@
   </div>
 </section>
 
-<!-- Propuesta 4: Diferenciador Tecnológico -->
+<!-- Ventaja Tecnológica Propietaria & Mockup Dashboard -->
 <section class="section tech-diff-section" data-od-id="tech-diff-section">
   <div class="container">
     <div class="tech-grid">
       <div>
         <span class="eyebrow reveal reveal-left">Ventaja Tecnológica Propietaria</span>
-        <h2 class="reveal reveal-delay-1 reveal-left">Tecnología creada para potenciar tu negocio</h2>
-        <p class="reveal reveal-delay-2">En ALMPES no tercerizamos la tecnología — la desarrollamos. Creamos plataformas propias que se adaptan a la operación de cada cliente, eliminando las limitaciones de los sistemas genéricos del mercado.</p>
+        <h2 class="reveal reveal-delay-1 reveal-left">Tecnología y dashboards creados para potenciar tu operación</h2>
+        <p class="reveal reveal-delay-2">En ALMPES no dependemos de licencias rígidas: desarrollamos plataformas modulares con IA y reportería en tiempo real para brindarte total visibilidad y control de tus KPIs.</p>
         
         <div class="tech-features-list">
           <div class="tech-feature-item reveal reveal-delay-1 reveal-left">
             <div class="tech-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             </div>
             <div class="tech-feature-text">
-              <h4>Sistema de gestión a tu medida</h4>
-              <p>Controla cada etapa de tu operación desde una sola plataforma: trazabilidad de principio a fin, métricas en tiempo real y resultados medibles.</p>
+              <h4>Sistema de gestión y reportería a tu medida</h4>
+              <p>Monitorea llamadas activas, tasas de conversión, tiempos de respuesta y SLAs en dashboards intuitivos con actualización en vivo.</p>
             </div>
           </div>
 
           <div class="tech-feature-item reveal reveal-delay-2 reveal-left">
             <div class="tech-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.5 7.5"/></svg>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.5 7.5"/></svg>
             </div>
             <div class="tech-feature-text">
-              <h4>Inteligencia Artificial aplicada</h4>
-              <p>Automatizamos el análisis de cada interacción para mejorar la calidad, anticipar necesidades y dar soporte en tiempo real a tu equipo.</p>
+              <h4>Inteligencia Artificial y Auditoría de Calidad</h4>
+              <p>Análisis de sentimiento, detección de palabras clave y transcripción automática para asegurar el cumplimiento del guion y la satisfacción del usuario.</p>
             </div>
           </div>
 
           <div class="tech-feature-item reveal reveal-delay-3 reveal-left">
             <div class="tech-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
             <div class="tech-feature-text">
-              <h4>Conectividad empresarial de alto nivel</h4>
-              <p>Infraestructura robusta con redundancia operativa que garantiza continuidad 24/7 y comunicaciones sin interrupciones.</p>
+              <h4>Alta disponibilidad y telefonía VoIP redundante</h4>
+              <p>Infraestructura en nube con redundancia geográfica 99.9% uptime, respaldos automáticos y enlaces de fibra óptica dedicados.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="tech-visual-img reveal reveal-delay-2 reveal-right">
-        <img src="assets/img/colleagues-working-together-call-center-office.webp" alt="Tecnología personalizada ALMPES" width="1200" height="798" loading="lazy">
+      <div class="tech-dashboard-mockup reveal reveal-delay-2 reveal-right">
+        <div class="mockup-topbar">
+          <div class="mockup-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="mockup-title">ALMPES Operation Cloud — Live Dashboard</span>
+          <span class="dot-live" title="Actualización en vivo"></span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-stat-box">
+            <span>Contactabilidad</span>
+            <strong>92.4%</strong>
+          </div>
+          <div class="mockup-stat-box">
+            <span>Resolución FCR</span>
+            <strong>94.1%</strong>
+          </div>
+          <div class="mockup-stat-box">
+            <span>Cumplimiento SLA</span>
+            <strong>99.8%</strong>
+          </div>
+          <div class="mockup-preview-img">
+            <img src="assets/img/colleagues-working-together-call-center-office.webp" alt="Dashboard de Operaciones ALMPES" width="1200" height="798" loading="lazy">
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
+<!-- Testimonios Corporativos -->
+<section class="section testimonials-section" data-od-id="testimonials-section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow reveal reveal-left">Testimonios de Clientes</span>
+      <h2 class="reveal reveal-delay-1 reveal-left">La confianza de quienes operan con nosotros</h2>
+      <p class="reveal reveal-delay-2">Comentarios de líderes de operaciones y gerentes comerciales que han escalado sus resultados junto a ALMPES.</p>
+    </div>
 
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal reveal-delay-1">
+        <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="quote-icon"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <p class="testimonial-text">“ALMPES nos brindó la flexibilidad necesaria para multiplicar por 3 nuestro volumen de llamadas en temporada alta, manteniendo una satisfacción de clientes impecable y cero caídas de servicio.”</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">GC</div>
+          <div class="author-info">
+            <strong>Gerencia Comercial &amp; Canales</strong>
+            <span>Sector Financiero &amp; Retail</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="quote-icon"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <p class="testimonial-text">“La certificación ISO/IEC 27001 fue determinante para contratarlos. Su rigurosidad en el tratamiento de datos y los reportes en tiempo real nos permiten auditar la operación de forma transparente.”</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DO</div>
+          <div class="author-info">
+            <strong>Dirección de Operaciones</strong>
+            <span>Telecomunicaciones &amp; Conectividad</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-3">
+        <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="quote-icon"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <p class="testimonial-text">“El equipo de televentas de ALMPES superó la tasa de conversión promedio del mercado desde el segundo mes. Su capacidad de capacitación y gestión humana marca una gran diferencia.”</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JV</div>
+          <div class="author-info">
+            <strong>Jefatura de Ventas Outbound</strong>
+            <span>Servicios de Salud &amp; Seguros</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección CTA Comercial -->
 <section class="section section--cta-float" data-od-id="cta-section">
   <div class="container">
     <div class="cta-band reveal">
       <div class="cta-band-body">
-        <span class="eyebrow eyebrow--rose">Contáctanos</span>
+        <span class="eyebrow eyebrow--rose">Impulsa tu Operación</span>
         <h2>¿Listo para optimizar la atención y ventas de tu empresa?</h2>
-        <p>Analizamos tu operación inhouse o actual proveedor sin costo y te presentamos una propuesta a la medida.</p>
+        <p>Analizamos tu operación in-house o actual proveedor sin costo y te presentamos una propuesta técnica y comercial a la medida.</p>
         <div class="cta-actions">
           <a href="contacto.html" class="btn btn--accent">Solicitar propuesta B2B</a>
-          <a href="https://api.whatsapp.com/send?phone=51914104466&text=Hola%20ALMPES%2C%20quiero%20cotizar%20servicios%20BPO%20para%20mi%20empresa." class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a href="https://wa.me/51914104466?text=Hola%20ALMPES%2C%20quiero%20cotizar%20servicios%20BPO%20para%20mi%20empresa." class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp directo</a>
         </div>
       </div>
     </div>
   </div>
   <div class="cta-float-img cta-float-img--right reveal reveal-fade">
     <div class="cta-float-img__inner">
-      <img src="assets/img/contacto-team.webp" alt="Equipo ALMPES" width="1260" height="709" loading="lazy">
+      <img src="assets/img/contacto-team.webp" alt="Equipo de Operaciones ALMPES" width="1260" height="709" loading="lazy">
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="site-footer reveal" data-od-id="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/logo-almpes.webp" alt="ALMPES Contact Center" width="346" height="85" loading="lazy">
-        <p>Empresa dedicada a la búsqueda de soluciones de negocio, mejorando la comunicación entre tu empresa y tus usuarios finales.</p>
+        <p>Empresa especializada en soluciones BPO, Contact Center, ventas omnicanal y tecnología para empresas líderes en Perú.</p>
         <div class="social-links">
           <a href="https://facebook.com/almpes/" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
           <a href="https://www.instagram.com/almpesperu/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
           </a>
           <a href="https://www.tiktok.com/@almpescontactcenter" target="_blank" rel="noopener" aria-label="TikTok">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z"/></svg>
           </a>
           <a href="https://www.linkedin.com/company/almpes-contact-center/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
         </div>
       </div>
@@ -486,13 +665,15 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contáctanos</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+          <li><a href="trabaja.html">Trabaja con nosotros</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
         </ul>
       </div>
       <div>
-        <h5>Contacto</h5>
+        <h5>Contacto Directo</h5>
         <ul>
-<li><a href="tel:+5117481008">(01) 748-1008</a></li>
+          <li><a href="tel:+5117481008">(01) 748-1008</a></li>
           <li><a href="tel:+51914104466">914 104 466</a></li>
           <li><a href="mailto:contactos@almpes.com">contactos@almpes.com</a></li>
           <li><a href="mailto:reclutamiento@almpes.com">reclutamiento@almpes.com</a></li>
@@ -501,14 +682,16 @@
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> ALMPES Contact Center. Todos los derechos reservados.</span>
-      <span>Servicios BPO · Call Center en Lima, Perú</span>
+      <span>Servicios BPO · Call Center en Miraflores, Lima, Perú</span>
     </div>
   </div>
-</main>
 </footer>
 
-<a href="https://api.whatsapp.com/send?phone=51914104466&text=HolaAlmpes" class="wa-float reveal" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.14.82.84-3.06-.19-.31a8.11 8.11 0 0 1-1.24-4.25c0-4.48 3.65-8.12 8.14-8.12 4.48 0 8.12 3.64 8.12 8.12 0 4.48-3.65 8.11-8.09 8.11Zm4.47-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+
+<!-- Botón Flotante de WhatsApp con Estado Online -->
+<a href="https://wa.me/51914104466?text=Hola%20ALMPES%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios%20BPO." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos directamente por WhatsApp">
+  <span class="wa-online-dot" title="En línea"></span>
+  <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.14.82.84-3.06-.19-.31a8.11 8.11 0 0 1-1.24-4.25c0-4.48 3.65-8.12 8.14-8.12 4.48 0 8.12 3.64 8.12 8.12 0 4.48-3.65 8.11-8.09 8.11Zm4.47-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
 </a>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
