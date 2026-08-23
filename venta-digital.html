@@ -254,6 +254,60 @@
   </div>
 </section>
 
+<section class="section section--alt" data-od-id="other-services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Explora también</span>
+      <h2 class="reveal reveal-delay-1">Otros servicios que te pueden interesar</h2>
+    </div>
+    <div class="svc-carousel">
+      <button class="svc-carousel-btn svc-carousel-prev" aria-label="Anterior" disabled>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="svc-carousel-track">
+        <a href="inbound.html" class="service-card card-bg--atencion reveal">
+          <div class="icon-wrap"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 10l-4 4l6 6l4-16l-18 7l4 2l2 6l3-4"/></svg></div>
+          <span class="tag">Llamada Entrante</span>
+          <h3>Atención al Cliente (Inbound)</h3>
+          <p>Atención omnicanal, gestión de reclamos, soporte técnico multinivel, help desk y resolución en primer contacto (FCR) vía telefónica, chat y correo.</p>
+          <span class="go">Ver detalles →</span>
+        </a>
+        <a href="outbound.html" class="service-card card-bg--ventas reveal">
+          <div class="icon-wrap"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20l-4-9l-9-4z"/></svg></div>
+          <span class="tag">Llamada Saliente</span>
+          <h3>Gestión de Ventas &amp; Cobranzas</h3>
+          <p>Telemarketing de alta conversión, colocación de productos financieros, cobranza telefónica preventiva y castigada, encuestas y agendamiento de citas.</p>
+          <span class="go">Ver detalles →</span>
+        </a>
+        <a href="campo.html" class="service-card card-bg--campo reveal">
+          <div class="icon-wrap"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <span class="tag">Operaciones Presenciales</span>
+          <h3>Gestión en Campo</h3>
+          <p>Fuerzas de venta presencial, cobranzas in situ, entrega de documentos contractuales y verificación domiciliaria con geolocalización en tiempo real.</p>
+          <span class="go">Ver detalles →</span>
+        </a>
+        <a href="consultoria.html" class="service-card card-bg--consultoria reveal">
+          <div class="icon-wrap"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83"/></svg></div>
+          <span class="tag">Estrategia Operacional</span>
+          <h3>Asesoría Especializada</h3>
+          <p>Dimensionamiento de plataformas in-house, auditorías de calidad bajo ISO 9001, optimización de árboles IVR y consultoría en ciberseguridad ISO/IEC 27001.</p>
+          <span class="go">Ver detalles →</span>
+        </a>
+        <a href="hosting.html" class="service-card card-bg--hosting reveal">
+          <div class="icon-wrap"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <span class="tag">Infraestructura TI</span>
+          <h3>Infraestructura Dedicada</h3>
+          <p>Servidores dedicados de alta disponibilidad, telefonía VoIP corporativa, redes VPN blindadas, respaldos en nube y soporte técnico 24/7.</p>
+          <span class="go">Ver detalles →</span>
+        </a>
+      </div>
+      <button class="svc-carousel-btn svc-carousel-next" aria-label="Siguiente">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer reveal" data-od-id="footer">
@@ -311,5 +365,25 @@
 </a>
 
 <script src="js/main.js"></script>
+<script>
+(function(){
+  var c=document.querySelector('.svc-carousel-track');
+  if(!c)return;
+  var w=c.closest('.svc-carousel');
+  var p=w.querySelector('.svc-carousel-prev');
+  var n=w.querySelector('.svc-carousel-next');
+  var cards=c.querySelectorAll('.service-card');
+  function sw(){return cards[0]?cards[0].offsetWidth+24:300}
+  p.addEventListener('click',function(){c.scrollBy({left:-sw(),behavior:'smooth'})});
+  n.addEventListener('click',function(){c.scrollBy({left:sw(),behavior:'smooth'})});
+  function up(){
+    p.disabled=c.scrollLeft<=0;
+    n.disabled=c.scrollLeft>=c.scrollWidth-c.clientWidth-1;
+  }
+  c.addEventListener('scroll',up,{passive:true});
+  up();
+  window.addEventListener('resize',up);
+})();
+</script>
 </body>
 </html>
