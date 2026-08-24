@@ -671,4 +671,42 @@
     }
   });
 
+  // 11. Hero Rotating Text (Atento-style slide)
+  var rotateWords = document.querySelectorAll('.hero-rotate-word');
+  if (rotateWords.length > 1) {
+    var currentIdx = 0;
+    setInterval(function () {
+      var current = rotateWords[currentIdx];
+      var nextIdx = (currentIdx + 1) % rotateWords.length;
+      var next = rotateWords[nextIdx];
+      current.classList.remove('hero-rotate-word--active');
+      current.classList.add('hero-rotate-word--exit');
+      next.classList.add('hero-rotate-word--active');
+      setTimeout(function () {
+        current.classList.remove('hero-rotate-word--exit');
+      }, 500);
+      currentIdx = nextIdx;
+    }, 2200);
+  }
+
+  // 12. Hero Parallax Opacity on Scroll
+  var heroTextStack = document.querySelector('.hero-text-stack');
+  if (heroTextStack) {
+    var heroSection = document.querySelector('.hero');
+    function updateHeroParallax() {
+      if (!heroSection) return;
+      var rect = heroSection.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var visible = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0));
+      var ratio = visible / rect.height;
+      if (ratio < 0.65) {
+        heroTextStack.classList.add('hero-text-stack--faded');
+      } else {
+        heroTextStack.classList.remove('hero-text-stack--faded');
+      }
+    }
+    window.addEventListener('scroll', updateHeroParallax, { passive: true });
+    updateHeroParallax();
+  }
+
 })();
