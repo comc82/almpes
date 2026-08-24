@@ -861,7 +861,7 @@ body.nav-locked{ overflow:hidden; }
 .social-links a:hover{ background:rgba(255,255,255,0.15); color:var(--white); }
 .site-footer h5{
   font-family:var(--font-mono); font-size:11px; letter-spacing:.08em;
-  text-transform:uppercase; color:var(--rose-lt); margin-bottom:18px; font-weight:500;
+  text-transform:uppercase; color:#fff; margin-bottom:18px; font-weight:700;
 }
 .site-footer ul li{ margin-bottom:10px; }
 .site-footer ul li a,.site-footer ul li span{ font-size:13.5px; transition:color .25s; }
@@ -1770,6 +1770,30 @@ body.nav-locked{ overflow:hidden; }
   flex-direction: column;
   flex: 1;
 }
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.why-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(130, 47, 50, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+  flex-shrink: 0;
+}
+.why-card-top .why-num {
+  margin-bottom: 0;
+}
+/* trabaja.html variant: cards without .why-card-body need explicit padding */
+.why-card:not(:has(.why-card-img)) {
+  padding: 28px;
+}
 .why-num {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -2230,96 +2254,6 @@ body.nav-locked{ overflow:hidden; }
 }
 
 /* ── Módulo de Vacantes en Trabaja con Nosotros ── */
-.vacantes-section {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-}
-.vacantes-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.vacante-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s;
-}
-.vacante-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-  border-color: rgba(130, 47, 50, 0.25);
-}
-.vacante-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-}
-.vacante-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 4px;
-  color: var(--fg);
-}
-.vacante-campaign {
-  font-size: 13px;
-  color: var(--rose);
-  font-weight: 500;
-}
-.vacante-status {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--success);
-  background: rgba(58, 125, 92, 0.1);
-  padding: 3px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-.vacante-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.vacante-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  color: var(--fg-sub);
-  background: var(--surface);
-  padding: 4px 10px;
-  border-radius: 4px;
-}
-.vacante-desc {
-  font-size: 13.5px;
-  line-height: 1.6;
-  color: var(--muted);
-  margin: 0;
-}
-.vacante-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
-  margin-top: auto;
-}
-.vacante-salary {
-  font-size: 12.5px;
-  color: var(--fg);
-  font-weight: 600;
-}
-.vacante-apply-btn {
-  padding: 8px 16px;
-  font-size: 13px;
-}
-
 /* ── Checkbox de Privacidad en Formularios (Ley 29733) ── */
 .field--checkbox {
   display: flex;
@@ -2493,7 +2427,6 @@ body.nav-locked{ overflow:hidden; }
   .why-card-img { height: 160px; }
   .cases-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
-  .vacantes-grid { grid-template-columns: 1fr; }
   .mv-hero-grid { grid-template-columns: 1fr; }
   .svc-framework-grid { grid-template-columns: 1fr; }
   .mockup-body { grid-template-columns: 1fr; }
