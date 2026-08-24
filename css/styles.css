@@ -1087,7 +1087,8 @@ body.nav-locked{ overflow:hidden; }
   .hero-ctas{ margin-top:24px; }
   .hero-badges-wrap{ margin-top:24px; padding-top:16px; }
   .hero-stats-row{ margin-top:24px; padding-top:16px; }
-  .hero .hero-grid{ max-width:50%; }
+  .hero .hero-grid{ max-width:70%; }
+  .hero-rotate-cta{ display:block; margin-top:4px; }
 
 .hero::before{
     background:linear-gradient(to right, #FFFFFF 0%, #FFFFFF 30%, rgba(255,255,255,0.6) 40%, transparent 52%);
