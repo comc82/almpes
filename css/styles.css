@@ -441,7 +441,7 @@ body.nav-locked{ overflow:hidden; }
 .hero-rotate-word{
   display:block;
   position:absolute;
-  top:0; left:0;
+  top:6px; left:0;
   width:100%;
   color:var(--accent);
   opacity:0;
@@ -2340,18 +2340,7 @@ body.nav-locked{ overflow:hidden; }
   box-shadow: var(--shadow-sm);
   transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
-.mv-hero-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--accent);
-}
-.mv-hero-card--vision::before {
-  background: var(--rose);
-}
+
 .mv-hero-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
