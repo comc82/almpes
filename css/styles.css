@@ -1362,7 +1362,7 @@ body.nav-locked{ overflow:hidden; }
 .card-bg--consultoria{ --card-img: url('../assets/img/svc-consultoria-v2.webp'); }
 
 /* ── Service carousel (other services at bottom of service pages) ── */
-.svc-carousel{ position:relative; }
+.svc-carousel{ position:relative; padding:0 32px; }
 .svc-carousel-track{
   display:flex; gap:24px;
   overflow-x:auto; scroll-snap-type:x mandatory;
@@ -1378,10 +1378,10 @@ body.nav-locked{ overflow:hidden; }
 }
 .svc-carousel-btn{
   position:absolute; top:50%; transform:translateY(-50%);
-  z-index:5; width:44px; height:44px; border-radius:50%;
-  border:1px solid var(--border); background:var(--white);
+  z-index:5; width:48px; height:48px; border-radius:50%;
+  border:2px solid var(--border-hi); background:var(--white);
   display:flex; align-items:center; justify-content:center;
-  cursor:pointer; box-shadow:var(--shadow-sm);
+  cursor:pointer; box-shadow:var(--shadow);
   transition:all .25s var(--ease);
 }
 .svc-carousel-btn:hover:not(:disabled){
@@ -1389,8 +1389,43 @@ body.nav-locked{ overflow:hidden; }
   border-color:var(--accent); box-shadow:0 6px 20px rgba(130,47,50,0.3);
 }
 .svc-carousel-btn:disabled{ opacity:.35; cursor:default; }
-.svc-carousel-prev{ left:-8px; }
-.svc-carousel-next{ right:-8px; }
+.svc-carousel-prev{ left:-28px; }
+.svc-carousel-next{ right:-28px; }
+.svc-other-card{
+  flex:0 0 calc(33.333% - 16px); min-width:280px;
+  background:var(--white); border:1px solid var(--border);
+  border-radius:var(--radius); overflow:hidden;
+  text-decoration:none; color:var(--fg);
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+.svc-other-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+  border-color:var(--border-hi);
+}
+.svc-other-card .svc-other-img{
+  width:100%; height:180px; overflow:hidden;
+  background:var(--surface);
+}
+.svc-other-card .svc-other-img img{
+  width:100%; height:100%; object-fit:cover;
+  transition:transform .45s var(--ease);
+}
+.svc-other-card:hover .svc-other-img img{ transform:scale(1.06); }
+.svc-other-card .svc-other-body{ padding:24px 24px 20px; }
+.svc-other-card .svc-other-tag{
+  display:inline-block; font-family:'IBM Plex Mono',monospace;
+  font-size:11px; font-weight:500; letter-spacing:.5px; text-transform:uppercase;
+  color:var(--rose); margin-bottom:10px;
+}
+.svc-other-card h3{ font-size:18px; margin:0 0 8px; color:var(--fg); }
+.svc-other-card p{ font-size:14px; color:var(--fg-sub); margin:0 0 16px; line-height:1.65; }
+.svc-other-card .svc-other-link{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:13px; font-weight:600; color:var(--accent);
+  transition:gap .25s var(--ease);
+}
+.svc-other-card:hover .svc-other-link{ gap:10px; }
 
 /* ── Card bg: image full color, white translucent boxes, guinda on hover ── */
 .service-card.card-bg-var--e{ background: transparent; }
@@ -2463,11 +2498,17 @@ body.nav-locked{ overflow:hidden; }
 
 /* ── Carousel responsive ── */
 @media(max-width:900px){
-  .svc-carousel-track .service-card{ flex:0 0 calc(50% - 12px); min-width:260px; }
-  .svc-carousel-prev{ left:0; }
-  .svc-carousel-next{ right:0; }
+  .svc-carousel-track .service-card,
+  .svc-carousel-track .svc-other-card{ flex:0 0 calc(50% - 12px); min-width:260px; }
+  .svc-carousel{ padding:0 24px; }
+  .svc-carousel-prev{ left:-4px; }
+  .svc-carousel-next{ right:-4px; }
 }
 @media(max-width:600px){
-  .svc-carousel-track .service-card{ flex:0 0 100%; min-width:0; }
-  .svc-carousel-btn{ width:38px; height:38px; }
+  .svc-carousel-track .service-card,
+  .svc-carousel-track .svc-other-card{ flex:0 0 100%; min-width:0; }
+  .svc-carousel{ padding:0 8px; }
+  .svc-carousel-btn{ width:40px; height:40px; }
+  .svc-carousel-prev{ left:-4px; }
+  .svc-carousel-next{ right:-4px; }
 }
