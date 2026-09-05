@@ -96,7 +96,12 @@
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
       if (href && href.length > 1) {
-        const target = document.querySelector(href);
+        let target = null;
+        try {
+          target = document.querySelector(href);
+        } catch (err) {
+          return;
+        }
         if (target) {
           e.preventDefault();
           const top = target.getBoundingClientRect().top + window.pageYOffset - 90;
@@ -707,6 +712,25 @@
     }
     window.addEventListener('scroll', updateHeroParallax, { passive: true });
     updateHeroParallax();
+  }
+
+  // 13. Service Carousel (Campos/Servicios/Outbound, etc.)
+  const svcTrack = document.querySelector('.svc-carousel-track');
+  if (svcTrack) {
+    const svcWrap = svcTrack.closest('.svc-carousel');
+    const svcPrev = svcWrap.querySelector('.svc-carousel-prev');
+    const svcNext = svcWrap.querySelector('.svc-carousel-next');
+    const svcCards = svcTrack.querySelectorAll('.svc-other-card, .service-card');
+    const svcStep = () => svcCards[0] ? svcCards[0].offsetWidth + 24 : 300;
+    const svcUpdate = () => {
+      svcPrev.disabled = svcTrack.scrollLeft <= 0;
+      svcNext.disabled = svcTrack.scrollLeft >= svcTrack.scrollWidth - svcTrack.clientWidth - 1;
+    };
+    svcPrev.addEventListener('click', () => svcTrack.scrollBy({ left: -svcStep(), behavior: 'smooth' }));
+    svcNext.addEventListener('click', () => svcTrack.scrollBy({ left: svcStep(), behavior: 'smooth' }));
+    svcTrack.addEventListener('scroll', svcUpdate, { passive: true });
+    svcUpdate();
+    window.addEventListener('resize', svcUpdate);
   }
 
 })();

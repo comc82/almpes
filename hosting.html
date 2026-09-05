@@ -389,25 +389,5 @@
 </a>
 
 <script src="js/main.js"></script>
-<script>
-(function(){
-  var c=document.querySelector('.svc-carousel-track');
-  if(!c)return;
-  var w=c.closest('.svc-carousel');
-  var p=w.querySelector('.svc-carousel-prev');
-  var n=w.querySelector('.svc-carousel-next');
-  var cards=c.querySelectorAll('.svc-other-card, .service-card');
-  function sw(){return cards[0]?cards[0].offsetWidth+24:300}
-  p.addEventListener('click',function(){c.scrollBy({left:-sw(),behavior:'smooth'})});
-  n.addEventListener('click',function(){c.scrollBy({left:sw(),behavior:'smooth'})});
-  function up(){
-    p.disabled=c.scrollLeft<=0;
-    n.disabled=c.scrollLeft>=c.scrollWidth-c.clientWidth-1;
-  }
-  c.addEventListener('scroll',up,{passive:true});
-  up();
-  window.addEventListener('resize',up);
-})();
-</script>
 </body>
 </html>
