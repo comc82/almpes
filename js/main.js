@@ -6,6 +6,12 @@
 (function () {
   'use strict';
 
+  // 0. Async Font Loading: activate Google Fonts stylesheet (media="print" while loading)
+  const fontsLink = document.querySelector('link[rel="stylesheet"][media="print"][href*="fonts.googleapis.com"]');
+  if (fontsLink) {
+    fontsLink.media = 'all';
+  }
+
   // 1. Dynamic Copyright Year
   const yearEl = document.getElementById('year');
   if (yearEl) {
@@ -19,10 +25,20 @@
   const navClose = document.querySelector('.nav-close');
 
   function setDrawer(open) {
-    if (navDrawer) navDrawer.classList.toggle('open', open);
+    if (navDrawer) {
+      navDrawer.classList.toggle('open', open);
+      if (open) {
+        navDrawer.removeAttribute('inert');
+        navDrawer.setAttribute('aria-hidden', 'false');
+        if (navClose) navClose.focus();
+      } else {
+        navDrawer.setAttribute('inert', '');
+        navDrawer.setAttribute('aria-hidden', 'true');
+        if (navToggle) navToggle.focus();
+      }
+    }
     if (navOverlay) navOverlay.classList.toggle('open', open);
     if (navToggle) navToggle.setAttribute('aria-expanded', String(open));
-    if (navDrawer) navDrawer.setAttribute('aria-hidden', String(!open));
     document.body.classList.toggle('nav-locked', open);
   }
 
