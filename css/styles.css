@@ -465,7 +465,7 @@ body.nav-locked{ overflow:hidden; }
 
 /* ── Hero parallax opacity on scroll ── */
 .hero-text-stack.hero-text-stack--faded{
-  opacity:.72;
+  opacity:1;
 }
 
 .hero-ctas{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
@@ -1270,7 +1270,7 @@ body.nav-locked{ overflow:hidden; }
   font-size: 12.5px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--muted-lt);
+  color: var(--muted);
   margin-bottom: 14px;
   display: flex;
   align-items: center;
