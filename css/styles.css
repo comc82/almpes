@@ -602,7 +602,7 @@ body.nav-locked{ overflow:hidden; }
   font-family:var(--font-mono); color:var(--accent); font-size:13px;
   letter-spacing:0.04em; font-weight:500;
 }
-.why-item h4{ margin:10px 0 8px; font-size:18px; }
+.why-item h3{ margin:10px 0 8px; font-size:18px; }
 .why-item p{ color:var(--muted); font-size:14.5px; margin:0; line-height:1.65; }
 
 /* ── Clients carousel ── */
@@ -872,7 +872,7 @@ body.nav-locked{ overflow:hidden; }
   display:flex; align-items:center; justify-content:center;
   margin-bottom:20px; flex-shrink:0;
 }
-.process-step h4{ font-size:17px; margin-bottom:8px; }
+.process-step h3{ font-size:17px; margin-bottom:8px; }
 .process-step p{ font-size:14px; margin:0; line-height:1.65; color:var(--muted); flex:1; }
 .process-flow .process-step:nth-child(1){ transition-delay:0s; }
 .process-flow .process-step:nth-child(3){ transition-delay:.15s; }
@@ -901,7 +901,7 @@ body.nav-locked{ overflow:hidden; }
   transition:all .25s ease;
 }
 .social-links a:hover{ background:rgba(255,255,255,0.15); color:var(--white); }
-.site-footer h5{
+.site-footer h3{
   font-family:var(--font-mono); font-size:11px; letter-spacing:.08em;
   text-transform:uppercase; color:#fff; margin-bottom:18px; font-weight:700;
 }
@@ -1216,7 +1216,7 @@ body.nav-locked{ overflow:hidden; }
   .hero-badges-title{ font-size:13px; }
   .service-card .tag{ font-size:12px; }
   .step-circle{ width:40px; height:40px; font-size:13px; }
-  .site-footer h5{ font-size:12px; }
+  .site-footer h3{ font-size:12px; }
   .cert-body{ font-size:12px; }
   .hero-badge-text span{ font-size:12px; }
   .mockup-stat-box span{ font-size:12px; }
@@ -1648,7 +1648,7 @@ body.nav-locked{ overflow:hidden; }
   justify-content: center;
   flex-shrink: 0;
 }
-.tech-feature-text h4 {
+.tech-feature-text h3 {
   font-size: 1.05rem;
   margin-bottom: 4px;
 }
@@ -1950,7 +1950,7 @@ body.nav-locked{ overflow:hidden; }
   color: var(--fg);
   line-height: 1.25;
 }
-.case-card h4 {
+.case-card h3 {
   font-size: 16.5px;
   margin-bottom: 10px;
 }
@@ -2400,7 +2400,7 @@ body.nav-locked{ overflow:hidden; }
   background: rgba(155, 98, 112, 0.1);
   color: var(--rose);
 }
-.mv-hero-card h3 {
+.mv-hero-card h2 {
   font-size: 24px;
   margin-bottom: 14px;
 }
@@ -2435,7 +2435,7 @@ body.nav-locked{ overflow:hidden; }
   color: var(--rose);
   margin-bottom: 8px;
 }
-.svc-framework-card h4 {
+.svc-framework-card h3 {
   font-size: 16px;
   margin-bottom: 8px;
 }
