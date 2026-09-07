@@ -6,6 +6,7 @@
 Options -Indexes
 ServerSignature Off
 AddDefaultCharset UTF-8
+FileETag MTime Size
 
 # --- Force HTTPS (skip ACME/.well-known) ------------------------------------
 <IfModule mod_rewrite.c>
@@ -19,6 +20,38 @@ AddDefaultCharset UTF-8
   RewriteRule ^\.(gitignore|gitattributes|editorconfig)$ - [F,L]
 </IfModule>
 
+# --- WAF lite: block common web attack payloads (defense in depth) ----------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Block HTTP methods used by scanners (TRACE/TRACK/PUT/DELETE)
+  RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|PUT|DELETE)$ [NC]
+  RewriteRule .* - [F,L]
+
+  # SQL injection
+  RewriteCond %{QUERY_STRING} union[\s]*select [NC,OR]
+  RewriteCond %{QUERY_STRING} (select|insert|update|delete|drop).*(from|into|table) [NC,OR]
+  RewriteCond %{QUERY_STRING} (sleep|benchmark|waitfor)\( [NC,OR]
+  RewriteCond %{QUERY_STRING} (information_schema|information_schema\.tables) [NC,OR]
+  RewriteCond %{QUERY_STRING} (@@version|@@basedir|xp_cmdshell|sp_password|load_file) [NC,OR]
+  RewriteCond %{QUERY_STRING} ('--|--\s) [NC,OR]
+  RewriteCond %{REQUEST_URI} (union[\s]*select|information_schema|xp_cmdshell) [NC,OR]
+
+  # Cross-site scripting (XSS)
+  RewriteCond %{QUERY_STRING} (<script|</script|javascript:|vbscript:|onerror=|onload=|onmouseover=) [NC,OR]
+  RewriteCond %{QUERY_STRING} (document\.cookie|document\.location|alert\(|prompt\(|confirm\() [NC,OR]
+  RewriteCond %{REQUEST_URI} (<script|javascript:|vbscript:) [NC,OR]
+
+  # Remote/Local File Inclusion & RCE
+  RewriteCond %{QUERY_STRING} (base64_decode|gzinflate|gzuncompress|eval\(|assert\(|system\(|exec\(|passthru\(|shell_exec|phpinfo\(|md5\() [NC,OR]
+  RewriteCond %{QUERY_STRING} (\.\./|%2e%2e) [NC,OR]
+  RewriteCond %{QUERY_STRING} (php://|data://|phar://|zip://|expect://|file://) [NC,OR]
+  RewriteCond %{REQUEST_URI} (\.\./|%2e%2e) [NC,OR]
+  RewriteCond %{REQUEST_URI} (/etc/passwd|/etc/shadow|boot\.ini|cmd\.exe) [NC]
+
+  RewriteRule .* - [F,L]
+</IfModule>
+
 # --- Block sensitive files --------------------------------------------------
 <FilesMatch "\.(db|sqlite|sqlite3|db-shm|db-wal|log|bak|old|env|pem|key|ini|psd|ai|xd)$">
   Require all denied
@@ -28,8 +61,12 @@ AddDefaultCharset UTF-8
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
   Header always set Strict-Transport-Security "max-age=31536000"
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://formsubmit.co https://fonts.googleapis.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests"
   Header unset X-Powered-By
