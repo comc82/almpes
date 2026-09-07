@@ -70,6 +70,10 @@ FileETag MTime Size
   Header always set Strict-Transport-Security "max-age=31536000"
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://formsubmit.co https://fonts.googleapis.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests"
   Header unset X-Powered-By
+
+  # Cookie hardening: force Secure + HttpOnly on any cookie the server may emit
+  # (the site itself sets no cookies; this is defense in depth for the future)
+  Header edit Set-Cookie ^(.*)$ "$1; Secure; HttpOnly"
 </IfModule>
 
 # --- Compression -------------------------------------------------------------
