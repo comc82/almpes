@@ -32,7 +32,7 @@ Registro de la ficha en Bing Maps y envío del mapa del sitio al buscador.
 *Ventaja:* la empresa se muestra también en Bing, Yahoo, Microsoft Copilot y ChatGPT, que usan estas fichas para recomendar negocios. Se alimenta automáticamente desde Google.
 
 **D. Un solo dato de contacto en todos lados**
-Unificar dirección, teléfono 914 104 466 y correo en web, redes, Google, Bing y directorios.
+Unificar dirección, teléfono 957 250 995 y correo en web, redes, Google, Bing y directorios.
 *Ventaja:* cuando todos los datos coinciden, los buscadores confían en la empresa y la posicionan mejor sin pagar anuncios; el cliente siempre encuentra el dato correcto.
 
 **E. Redes conectadas con función clara**

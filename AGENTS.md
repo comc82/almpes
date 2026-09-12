@@ -117,7 +117,7 @@ Consulte siempre [`brand-spec.md`](file:///d:/GitHub/almpes/brand-spec.md) antes
 ## 6. Información Corporativa y de Contacto
 
 - **Ubicación:** Calle Bolívar 472, Miraflores 15074, Lima, Perú.
-- **Teléfono:** +51 914 104 466
+- **Teléfono:** +51 957 250 995
 - **Email Comercial:** `contactos@almpes.com`
 - **Email RRHH / Reclutamiento:** `reclutamiento@almpes.com`
 - **Horario:** Lunes a sábado de 9:00 a.m. a 6:00 p.m.

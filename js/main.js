@@ -456,12 +456,8 @@
     ts.value = String(nowTimestamp);
   });
 
-  const allowedDocMimes = [
-    'application/pdf',
-    'application/msword',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-  ];
-  const allowedDocExts = ['.pdf', '.doc', '.docx'];
+  const allowedDocMimes = ['application/pdf'];
+  const allowedDocExts = ['.pdf'];
 
   function validateCvFile(input) {
     if (!input.files || !input.files.length) return { valid: true };
@@ -471,10 +467,10 @@
     }
     const ext = '.' + file.name.split('.').pop().toLowerCase();
     if (allowedDocExts.indexOf(ext) === -1) {
-      return { valid: false, msg: 'Formato no válido. Sube tu CV en PDF, DOC o DOCX.' };
+      return { valid: false, msg: 'Formato no válido. Sube tu CV en PDF.' };
     }
     if (file.type && allowedDocMimes.indexOf(file.type) === -1) {
-      return { valid: false, msg: 'Tipo de archivo no permitido. Solo se aceptan PDF, DOC y DOCX.' };
+      return { valid: false, msg: 'Tipo de archivo no permitido. Solo se aceptan archivos PDF.' };
     }
     return { valid: true };
   }
