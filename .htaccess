@@ -20,6 +20,30 @@ FileETag MTime Size
   RewriteRule ^\.(gitignore|gitattributes|editorconfig)$ - [F,L]
 </IfModule>
 
+# --- 301 redirects: legacy WordPress URLs -> current static pages ------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Services
+  RewriteRule ^consultoria-especializada/?$ /consultoria.html [R=301,L,NC]
+  RewriteRule ^servicios-inbound/?$ /inbound.html [R=301,L,NC]
+  RewriteRule ^servicios-outbound/?$ /outbound.html [R=301,L,NC]
+  RewriteRule ^contactenos/?$ /contacto.html [R=301,L,NC]
+  RewriteRule ^nosotros/?$ /nosotros.html [R=301,L,NC]
+
+  # Careers (bolsa de trabajo)
+  RewriteRule ^trabaja/?$ /trabaja.html [R=301,L,NC]
+  RewriteRule ^postula-aqui/?$ /trabaja.html#postula [R=301,L,NC]
+  RewriteRule ^trabaja/.*$ /trabaja.html#postula [R=301,L,NC]
+  RewriteRule ^(supervisores-de-venta-de-seguros|teleoperadores-de-venta-de-seguros)/?$ /trabaja.html#postula [R=301,L,NC]
+
+  # Legacy employee portals / auth pages (no longer available)
+  RewriteRule ^(registro-personal|registro-planilla|actualizar-datos-personal|actualizar-datos-planilla|usuario-deshabilitado|usuarios)/?$ / [R=301,L,NC]
+
+  # WordPress archives
+  RewriteRule ^(author|category)/ / [R=301,L,NC]
+</IfModule>
+
 # --- WAF lite: block common web attack payloads (defense in depth) ----------
 <IfModule mod_rewrite.c>
   RewriteEngine On
