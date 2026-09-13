@@ -33,9 +33,9 @@ FileETag MTime Size
 
   # Careers (bolsa de trabajo)
   RewriteRule ^trabaja/?$ /trabaja.html [R=301,L,NC]
-  RewriteRule ^postula-aqui/?$ /trabaja.html#postula [R=301,L,NC]
-  RewriteRule ^trabaja/.*$ /trabaja.html#postula [R=301,L,NC]
-  RewriteRule ^(supervisores-de-venta-de-seguros|teleoperadores-de-venta-de-seguros)/?$ /trabaja.html#postula [R=301,L,NC]
+  RewriteRule ^postula-aqui/?$ /trabaja.html#postula [R=301,L,NC,NE]
+  RewriteRule ^trabaja/.*$ /trabaja.html#postula [R=301,L,NC,NE]
+  RewriteRule ^(supervisores-de-venta-de-seguros|teleoperadores-de-venta-de-seguros)/?$ /trabaja.html#postula [R=301,L,NC,NE]
 
   # Legacy employee portals / auth pages (no longer available)
   RewriteRule ^(registro-personal|registro-planilla|actualizar-datos-personal|actualizar-datos-planilla|usuario-deshabilitado|usuarios)/?$ / [R=301,L,NC]
