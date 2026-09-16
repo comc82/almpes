@@ -6,6 +6,28 @@
 (function () {
   'use strict';
 
+  // 0. Full-Page Loader: oculta el overlay cuando el documento termina de cargar
+  // (con timeout de seguridad para que nunca quede bloqueado el sitio)
+  const pageLoader = document.getElementById('page-loader');
+  if (pageLoader) {
+    let loaderHidden = false;
+    let loaderTimer = 0;
+
+    function hidePageLoader() {
+      if (loaderHidden) return;
+      loaderHidden = true;
+      window.clearTimeout(loaderTimer);
+      pageLoader.classList.add('is-hidden');
+    }
+
+    if (document.readyState === 'complete') {
+      hidePageLoader();
+    } else {
+      window.addEventListener('load', hidePageLoader, { once: true });
+    }
+    loaderTimer = window.setTimeout(hidePageLoader, 3500);
+  }
+
   // 0. Async Font Loading: activate Google Fonts stylesheet (media="print" while loading)
   const fontsLink = document.querySelector('link[rel="stylesheet"][media="print"][href*="fonts.googleapis.com"]');
   if (fontsLink) {

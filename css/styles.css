@@ -2517,3 +2517,34 @@ body.nav-locked{ overflow:hidden; }
   .svc-carousel-prev{ left:-4px; }
   .svc-carousel-next{ right:-4px; }
 }
+
+/* ── Page Loader (full-page) ── */
+#page-loader{
+  position:fixed; inset:0; z-index:9999;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bg);
+  opacity:1; visibility:visible;
+  transition:opacity .5s ease, visibility .5s ease;
+}
+#page-loader::before{
+  content:""; width:46px; height:46px; border-radius:50%;
+  border:3px solid var(--border-hi);
+  border-top-color:var(--accent);
+  animation:page-loader-spin .8s linear infinite;
+}
+#page-loader::after{
+  content:"ALMPES"; position:absolute; top:calc(50% + 42px);
+  font-family:var(--font-mono); font-size:11px; letter-spacing:.3em;
+  color:var(--muted); text-transform:uppercase;
+}
+#page-loader.is-hidden{
+  opacity:0; visibility:hidden; pointer-events:none;
+}
+html:has(#page-loader:not(.is-hidden)){
+  overflow:hidden;
+}
+@keyframes page-loader-spin{ to{ transform:rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce){
+  #page-loader::before{ animation-duration:1.6s; }
+}
