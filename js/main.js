@@ -317,7 +317,13 @@
 
   // 11. Expanding Collection Slider for Services
   const expandingCollection = document.querySelector('.expanding-collection');
-  if (expandingCollection && typeof Swiper !== 'undefined') {
+  let expandingCollectionInited = false;
+  const initExpandingCollection = function () {
+    if (expandingCollectionInited || !expandingCollection || typeof Swiper === 'undefined') {
+      return expandingCollectionInited;
+    }
+    expandingCollectionInited = true;
+
     const updateCoverScale = function (slideEl) {
       const cover = slideEl.querySelector('.expanding-collection-cover');
       const content = slideEl.querySelector('.expanding-collection-content');
@@ -426,6 +432,15 @@
         else swiperInstance.slidePrev();
       });
     });
+
+    return true;
+  };
+
+  if (expandingCollection && !initExpandingCollection()) {
+    window.addEventListener('load', initExpandingCollection, { once: true });
+    const swiperRetryTimer = window.setInterval(function () {
+      if (initExpandingCollection()) window.clearInterval(swiperRetryTimer);
+    }, 200);
   }
 
   // 12. Sede Sliders (Nosotros)
